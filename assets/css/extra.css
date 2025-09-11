@@ -3,63 +3,52 @@
 /* ============================================
    LOGO AS FIRST TAB IN NAVIGATION
    ============================================ */
+/* Force tabs to always display (even on small screens) */
+.md-tabs {
+  display: flex !important;
+  overflow-x: auto;
+  background: var(--md-primary-fg-color);
+}
+
+/* Hide hamburger menu button entirely */
+.md-header__button.md-header__button--menu {
+  display: none !important;
+}
+
+/* Keep the title aligned with tabs */
+.md-header__title {
+  display: flex !important;
+  align-items: center;
+}
+
+/* Prevent tabs from wrapping badly on narrow screens */
+.md-tabs__list {
+  flex-wrap: nowrap !important;
+}
+
+/* Make tabs scrollable horizontally if screen is too narrow */
+.md-tabs__list {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.md-tabs__item {
+  flex: 0 0 auto;
+}
 
 /* Keep the tabs visible but customize them */
 .md-tabs {
   background: var(--md-primary-fg-color);
 }
-/* Mobile Navigation Drawer Fix */
-@media screen and (max-width: 76.1875em) {
-  /* Show mobile menu button */
-  .md-header__button.md-header__button--menu {
-    display: block !important;
-    color: white;
-  }
-  
-  /* Hide tabs on mobile (they become drawer items) */
-  .md-tabs {
-    display: none !important;
-  }
-  
-  /* Show the header title container for menu button */
-  .md-header__title {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  /* Hide only the title text, not the container */
-  .md-header__topic {
-    display: none !important;
-  }
-  
-  /* Ensure navigation drawer works */
 
-  /* Style the drawer items */
-  .md-nav__item {
-    display: block !important;
-  }
-  
-  .md-nav__link {
-    display: block !important;
-    padding: 0.6rem 1rem;
-  }
-}
-
-/* Desktop - Keep tabs visible */
-@media screen and (min-width: 76.25em) {
-  .md-tabs {
-    display: block !important;
-  }
-  
-
-}
 /* Hide the default header logo since we'll show it in tabs */
 .md-header__button.md-logo {
   display: none !important;
 }
 
 /* Hide the site title */
+.md-header__title {
+  display: none !important;
+}
 
 /* Style the tabs container */
 .md-tabs__list {
@@ -201,6 +190,8 @@
     margin-right: 1rem;
   }
 }
+.md-header__title {
+  display: none !important;
 }
 .md-search {
   display: none !important;
@@ -642,7 +633,14 @@ border: 2px solid white;
     display: none !important;
 }
 
+.md-nav__item:first-child .md-nav__link {
+    display: none !important;
+}
 
+/* Hide the home breadcrumb in sidebar */
+.md-nav--primary .md-nav__item:first-child {
+    display: none;
+}
 
 /* Join page specific styles */
 .join-hero {
