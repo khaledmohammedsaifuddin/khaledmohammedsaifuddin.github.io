@@ -116,14 +116,15 @@
 /* Mobile: 1 column layout */
 @media (max-width: 576px) {
   .research-grid {
-    display: grid !important;   /* force grid layout */
-    grid-template-columns: 1fr; /* one card per row */
-    justify-items: center;      /* centers horizontally */
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);  /* 2 cards per row */
+    gap: 1rem;                              /* spacing between cards */
+    justify-items: center;                  /* centers each card */
   }
 
   .research-card {
-    max-width: 90%;             /* narrower than screen */
-    margin: 0 auto;             /* ensure centering */
+    width: 90%;              /* adjust width so two fit side by side */
+    max-width: 160px;        /* tweak depending on design */
   }
 }
 
