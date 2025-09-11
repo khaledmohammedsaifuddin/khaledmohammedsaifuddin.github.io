@@ -726,3 +726,29 @@ border: 2px solid white;
 [data-md-color-scheme="slate"] .position-requirements {
   background: var(--md-code-bg-color);
 }
+
+/* =====================================================
+   REMOVE HAMBURGER + SEARCH ICONS COMPLETELY
+   ===================================================== */
+
+/* Hamburger (menu) button */
+.md-header__button[for="__drawer"],
+label.md-header__button[for="__drawer"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Search button */
+.md-header__button[for="__search"],
+label.md-header__button[for="__search"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
