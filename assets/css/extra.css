@@ -3,6 +3,24 @@
 /* ============================================
    LOGO AS FIRST TAB IN NAVIGATION
    ============================================ */
+
+/* --- Remove hamburger and search icons --- */
+.md-header__button.md-header__button--menu,
+.md-header__button.md-header__button--search {
+  display: none !important;
+}
+
+/* --- Reduce gaps between navigation items --- */
+.md-tabs__list {
+  gap: 0 !important;   /* smaller spacing */
+  justify-content: flex-start;  /* keep aligned left */
+}
+
+.md-tabs__link {
+  padding: 0.2rem 0.8rem !important;  /* reduce padding inside tabs */
+  font-size: 0.9rem;  /* slightly smaller text */
+}
+
 /* Force tabs to always display (even on small screens) */
 .md-tabs {
   display: flex !important;
