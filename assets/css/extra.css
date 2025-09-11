@@ -15,25 +15,73 @@
   height: 0 !important;
   overflow: hidden !important;
 }
+/* =====================================================
+   NAVIGATION FIX FOR BOTH MOBILE + DESKTOP
+   ===================================================== */
 
-
-/* --- Reduce gaps between navigation items --- */
-.md-tabs__list {
-  gap: 0 !important;   /* smaller spacing */
-  justify-content: flex-start;  /* keep aligned left */
+/* Hide hamburger (menu) and search icons */
+.md-header__button[for="__drawer"],
+.md-header__button[for="__search"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
-.md-tabs__link {
-  padding: 0.2rem 0.8rem !important;  /* reduce padding inside tabs */
-  font-size: 0.9rem;  /* slightly smaller text */
-}
-
-/* Force tabs to always display (even on small screens) */
+/* Force tabs to always display, even on mobile */
 .md-tabs {
   display: flex !important;
-  overflow-x: auto;
+  overflow-x: auto !important;
   background: var(--md-primary-fg-color);
 }
+
+/* Style tab list */
+.md-tabs__list {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 0.3rem !important;              /* reduce spacing */
+  padding-left: 0.5rem !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Tab items */
+.md-tabs__item {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center;
+}
+
+/* Tab links */
+.md-tabs__link {
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  padding: 0.3rem 0.6rem !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.md-tabs__link:hover {
+  opacity: 0.85 !important;
+}
+
+/* Add logo before first tab */
+.md-tabs__list::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url('../favicon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+
 
 /* Hide hamburger menu button entirely */
 .md-header__button.md-header__button--menu {
@@ -55,9 +103,6 @@
 .md-tabs__list {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-}
-.md-tabs__item {
-  flex: 0 0 auto;
 }
 
 /* Keep the tabs visible but customize them */
@@ -82,23 +127,6 @@
   padding-left: 2rem;
 }
 
-/* Add logo as the first tab using CSS pseudo-element */
-.md-tabs__list::before {
-  content: '';
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-image: url('../favicon.png');  /* Adjust path to your logo */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  margin-right: 2rem;
-  border: 2px solid rgba(255,255,255,0.3);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .md-tabs__list::before:hover {
   transform: scale(1.1);
