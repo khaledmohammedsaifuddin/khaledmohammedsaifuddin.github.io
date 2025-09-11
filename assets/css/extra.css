@@ -840,38 +840,3 @@ label.md-header__button[for="__search"] {
 
 }
 
-@media (max-width: 576px) {
-  .research-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important; /* force 2 columns */
-    gap: 0.8rem !important;
-  }
-
-  .research-card {
-    all: unset;                                /* reset ALL earlier styles */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #e6f3ff;
-    border-radius: 8px;
-    padding: 0.6rem;
-    font-size: 0.8rem;
-    text-align: center;
-  }
-
-  .research-card p {
-    display: none !important;                  /* hide paragraph text */
-  }
-
-  .research-card h3 {
-    font-size: 0.85rem;
-    margin: 0.3rem 0 0;
-  }
-
-  .research-icon {
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-  }
-}
-
