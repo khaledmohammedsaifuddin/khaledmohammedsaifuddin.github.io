@@ -109,6 +109,9 @@
   align-items: center;
   padding-left: 2rem;
 }
+.md-banner a {
+  white-space: nowrap;
+}
 
 
 .md-tabs__list::before:hover {
