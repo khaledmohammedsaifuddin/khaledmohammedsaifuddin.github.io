@@ -818,31 +818,21 @@ label.md-header__button[for="__search"] {
 
 @media (max-width: 576px) {
   .research-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; /* two columns */
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
     gap: 0.5rem !important;
   }
 
   .research-card {
-    width: 100% !important;      /* fill its grid cell */
-    max-width: none !important;  /* remove 220px restriction */
+    flex: 0 1 calc(50% - 0.5rem) !important;  /* 2 per row */
+    max-width: calc(50% - 0.5rem) !important;
     margin: 0 !important;
-    padding: 0.5rem !important;  /* reduce padding */
+    padding: 0.8rem !important;
     box-sizing: border-box;
-    font-size: 0.8rem !important; /* shrink text if any */
   }
 
   .research-card p {
-    display: none !important;    /* hide paragraph text */
-  }
-
-  .research-card h3 {
-    font-size: 0.85rem !important; /* smaller titles */
-    line-height: 1.2 !important;
-  }
-
-  .research-icon {
-    font-size: 1.2rem !important; /* smaller icons */
-    margin-bottom: 0.2rem !important;
+    display: none !important;
   }
 }
