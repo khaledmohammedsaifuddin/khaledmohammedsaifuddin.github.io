@@ -116,22 +116,18 @@
 /* Mobile: 1 column layout */
 @media (max-width: 576px) {
   .research-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);   /* two equal columns */
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;   /* center the row */
     gap: 1rem;
-    justify-items: stretch;                  /* make items fill cell */
-    justify-content: center;                 /* center the grid itself */
   }
 
   .research-card {
-    width: 100% !important;         /* fill its grid cell */
-    max-width: none !important;     /* remove any previous limit */
-    margin: 0 !important;           /* no auto margins */
-    box-sizing: border-box;         /* padding counts in width */
+    flex: 0 1 calc(50% - 1rem);  /* 2 per row, minus gap */
+    max-width: calc(50% - 1rem);
+    margin: 0;
   }
 }
-
-
 
 
 .md-tabs__list::before:hover {
