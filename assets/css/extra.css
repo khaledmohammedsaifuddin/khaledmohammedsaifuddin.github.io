@@ -115,25 +115,6 @@
 
 /* Mobile: 1 column layout */
 /* Mobile view */
-@media (max-width: 576px) {
-  .research-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem !important;
-  }
-
-  .research-card {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0.8rem !important;
-    box-sizing: border-box;
-  }
-
-  .research-card > p {
-    display: none !important;
-  }
-}
 
 
 
@@ -833,4 +814,24 @@ label.md-header__button[for="__search"] {
   width: 0 !important;
   height: 0 !important;
   overflow: hidden !important;
+}
+
+@media (max-width: 576px) {
+  .research-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .research-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0.8rem !important;
+    box-sizing: border-box;
+  }
+
+  .research-card p {
+    display: none !important;
+  }
 }
