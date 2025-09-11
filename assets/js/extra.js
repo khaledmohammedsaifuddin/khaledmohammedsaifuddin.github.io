@@ -3,13 +3,13 @@
 // Enhanced interactivity for lab website
 document.addEventListener('DOMContentLoaded', function() {
     // Only modify tabs on desktop
+    document.addEventListener('DOMContentLoaded', function() {
+    // Only modify tabs on desktop
     if (window.innerWidth > 768) {
         setTimeout(function() {
-            // Find the first tab (Home) - THIS WAS MISSING
             const firstTab = document.querySelector('.md-tabs__item:first-child .md-tabs__link');
-            
+
             if (firstTab) {
-                // Create logo image element
                 const logoImg = document.createElement('img');
                 logoImg.src = '/assets/favicon.png';
                 logoImg.alt = 'KhaledLab';
@@ -22,51 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     transition: transform 0.3s ease;
                     display: block;
                 `;
-                
-                // Clear the existing content (text "Home")
-                firstTab.innerHTML = '';
-                
-                // Add the logo
+
+                // Replace only text, not whole tab
+                firstTab.textContent = '';
                 firstTab.appendChild(logoImg);
-                
-                // Adjust the tab styling
-                firstTab.style.cssText = `
-                    padding: 5px;
-                    margin-right: 1rem;
-                    display: flex;
-                    align-items: center;
-                    opacity: 1 !important;
-                `;
-                
-                // Add hover effect
-                firstTab.addEventListener('mouseenter', function() {
-                    logoImg.style.transform = 'scale(1.1)';
-                    logoImg.style.borderColor = 'rgba(255,255,255,0.5)';
-                });
-                
-                firstTab.addEventListener('mouseleave', function() {
-                    logoImg.style.transform = 'scale(1)';
-                    logoImg.style.borderColor = 'rgba(255,255,255,0.3)';
-                });
-                
-                // Optional: Add divider after logo
-                const tabsList = document.querySelector('.md-tabs__list');
-                if (tabsList && firstTab) {
-                    const divider = document.createElement('div');
-                    divider.style.cssText = `
-                        width: 1px;
-                        height: 25px;
-                        background: rgba(255,255,255,0.3);
-                        margin: 0 1rem;
-                    `;
-                    firstTab.parentElement.after(divider);
-                }
             }
         }, 100);
     }
-    
-    // Rest of your code continues here...
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
