@@ -63,9 +63,6 @@
 }
 
 /* Hide the site title */
-.md-header__title {
-  display: none !important;
-}
 
 /* Style the tabs container */
 .md-tabs__list {
