@@ -116,15 +116,17 @@
 /* Mobile: 1 column layout */
 @media (max-width: 576px) {
   .research-grid {
-    grid-template-columns: 1fr;   /* still 1 card per row */
-    justify-items: center;        /* centers the card horizontally */
+    display: grid !important;   /* force grid layout */
+    grid-template-columns: 1fr; /* one card per row */
+    justify-items: center;      /* centers horizontally */
   }
 
   .research-card {
-    max-width: 90%;               /* narrower than screen width */
-    margin: 0 auto;               /* ensure it's centered */
+    max-width: 90%;             /* narrower than screen */
+    margin: 0 auto;             /* ensure centering */
   }
 }
+
 
 .md-tabs__list::before:hover {
   transform: scale(1.1);
