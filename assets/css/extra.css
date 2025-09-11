@@ -825,9 +825,9 @@ label.md-header__button[for="__search"] {
   }
 
   .research-card {
-    flex: 0 0 calc(50% - 0.5rem) !important;  /* 2 per row */
-    max-width: calc(50% - 0.5rem) !important;
-    width: calc(50% - 0.5rem) !important;
+    flex: 0 0 calc(30% - 0.5rem) !important;  /* 2 per row */
+    max-width: calc(30% - 0.5rem) !important;
+    width: calc(30% - 0.5rem) !important;
     margin: 0 0 0.5rem 0 !important;
     padding: 0.6rem !important;
     box-sizing: border-box !important;
