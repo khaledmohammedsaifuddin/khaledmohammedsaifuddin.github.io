@@ -32,7 +32,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-image: url('../logo.png');  /* Adjust path to your logo */
+  background-image: url('../favicon.png');  /* Adjust path to your logo */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
        if (firstTab) {
             // Create logo image element
             const logoImg = document.createElement('img');
-            logoImg.src = '/assets/logo.png';  // Adjust path to your logo
+            logoImg.src = '/assets/favicon.png';  // Adjust path to your logo
                 logoImg.style.cssText = `
                 height: 3px;
                 width: 3px;
