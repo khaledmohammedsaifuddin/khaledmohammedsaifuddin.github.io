@@ -113,6 +113,18 @@
   white-space: nowrap;
 }
 
+/* Mobile: 1 column layout */
+@media (max-width: 576px) {
+  .research-grid {
+    grid-template-columns: 1fr;   /* still 1 card per row */
+    justify-items: center;        /* centers the card horizontally */
+  }
+
+  .research-card {
+    max-width: 90%;               /* narrower than screen width */
+    margin: 0 auto;               /* ensure it's centered */
+  }
+}
 
 .md-tabs__list::before:hover {
   transform: scale(1.1);
