@@ -34,10 +34,7 @@
   }
   
   /* Ensure navigation drawer works */
-  .md-nav--primary {
-    display: block !important;
-  }
-  
+
   /* Style the drawer items */
   .md-nav__item {
     display: block !important;
@@ -204,8 +201,6 @@
     margin-right: 1rem;
   }
 }
-.md-header__title {
-  display: none !important;
 }
 .md-search {
   display: none !important;
@@ -647,14 +642,7 @@ border: 2px solid white;
     display: none !important;
 }
 
-.md-nav__item:first-child .md-nav__link {
-    display: none !important;
-}
 
-/* Hide the home breadcrumb in sidebar */
-.md-nav--primary .md-nav__item:first-child {
-    display: none;
-}
 
 /* Join page specific styles */
 .join-hero {
