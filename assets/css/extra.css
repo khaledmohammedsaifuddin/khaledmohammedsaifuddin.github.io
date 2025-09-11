@@ -820,14 +820,14 @@ label.md-header__button[for="__search"] {
   .research-grid {
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: space-between !important; /* better spacing */
+    justify-content: flex-start !important;  /* left-align, not center */
     gap: 0.5rem !important;
   }
 
   .research-card {
-    flex: 0 0 48% !important;   /* force each card ~half width */
-    max-width: 48% !important;  /* prevent stretching */
-    width: 48% !important;      /* hard set width */
+    flex: 0 0 calc(50% - 0.5rem) !important;  /* 2 per row */
+    max-width: calc(50% - 0.5rem) !important;
+    width: calc(50% - 0.5rem) !important;
     margin: 0 0 0.5rem 0 !important;
     padding: 0.6rem !important;
     box-sizing: border-box !important;
