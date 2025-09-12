@@ -820,7 +820,7 @@ label.md-header__button[for="__search"] {
     max-width: 300px !important;          /* not too wide */
     margin-left: auto !important;         /* force horizontal centering */
     margin-right: auto !important;
-    padding: 0.8rem !important;
+    padding: 0.1rem !important;
     box-sizing: border-box !important;
             /* center text inside card */
   }
