@@ -833,5 +833,10 @@ label.md-header__button[for="__search"] {
     display: none !important;                  /* hide paragraph text */
   }
 
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
 }
 
