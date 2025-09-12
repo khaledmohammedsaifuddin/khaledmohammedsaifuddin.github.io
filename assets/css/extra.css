@@ -809,13 +809,13 @@ label.md-header__button[for="__search"] {
 @media (max-width: 576px) {
   .research-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; /* two equal columns */
-    gap: 0.8rem !important;
+    grid-template-columns: 1fr 1fr !important; /* 2 equal columns */
+    gap: 1rem !important;
   }
 
   .research-card {
-    width: 100% !important;      /* take full width of its grid cell */
-    max-width: 100% !important;
+    width: auto !important;      /* let grid control width */
+    max-width: none !important;  /* remove 220px limit */
     margin: 0 !important;
     padding: 0.8rem !important;
     box-sizing: border-box !important;
