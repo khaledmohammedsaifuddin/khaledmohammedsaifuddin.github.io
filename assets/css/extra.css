@@ -809,21 +809,24 @@ label.md-header__button[for="__search"] {
 @media (max-width: 576px) {
   .research-grid {
     display: flex !important;
-    flex-direction: column !important;   /* stack vertically */
-    align-items: center !important;      /* center cards horizontally */
-    gap: 1rem !important;
+    flex-direction: column !important;    /* stack vertically */
+    align-items: center !important;       /* center child items */
+    justify-content: center !important;
+    width: 100% !important;
   }
 
   .research-card {
-    width: 90% !important;               /* narrower than screen */
-    max-width: 300px !important;         /* control maximum size */
-    margin: 0 auto !important;           /* extra guarantee for centering */
-    padding: 0.8rem;
-    box-sizing: border-box;
+    width: 90% !important;                /* take up most of row */
+    max-width: 300px !important;          /* not too wide */
+    margin-left: auto !important;         /* force horizontal centering */
+    margin-right: auto !important;
+    padding: 0.8rem !important;
+    box-sizing: border-box !important;
+    text-align: center !important;        /* center text inside card */
   }
 
   .research-card p {
-    display: none !important;            /* hide text */
+    display: none !important;
   }
 }
 
