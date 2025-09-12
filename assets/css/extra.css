@@ -822,7 +822,7 @@ label.md-header__button[for="__search"] {
     margin-right: auto !important;
     padding: 0.8rem !important;
     box-sizing: border-box !important;
-    text-align: center !important;        /* center text inside card */
+            /* center text inside card */
   }
 
 
