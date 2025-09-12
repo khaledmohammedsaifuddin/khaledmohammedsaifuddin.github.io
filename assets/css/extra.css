@@ -810,21 +810,24 @@ label.md-header__button[for="__search"] {
 @media (max-width: 576px) {
   .research-grid {
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important; /* 2 equal columns */
+    grid-template-columns: repeat(2, minmax(140px, 1fr)) !important;
     gap: 1rem !important;
+    justify-content: center !important;  /* center the grid */
   }
 
   .research-card {
-    width: auto !important;      /* let grid control width */
-    max-width: none !important;  /* remove 220px limit */
-    margin: 0 !important;
-    padding: 0.8rem !important;
-    box-sizing: border-box !important;
+    justify-self: center !important;     /* center inside grid cell */
+    width: 100% !important;
+    max-width: 160px !important;         /* keep cards from being too wide */
+    margin: 0;
+    padding: 0.8rem;
+    box-sizing: border-box;
   }
 
   .research-card p {
-    display: none !important;    /* hide text */
+    display: none !important;
   }
 }
+
 
 
