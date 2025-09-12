@@ -793,6 +793,11 @@ label.md-header__button[for="__drawer"] {
   height: 0 !important;
   overflow: hidden !important;
 }
+.inline-logo {
+  height: 32px;             /* Adjust display size */
+  vertical-align: middle;   /* Aligns with text */
+  image-rendering: -webkit-optimize-contrast; /* Helps browsers render sharper */
+}
 
 /* Search button */
 .md-header__button[for="__search"],
