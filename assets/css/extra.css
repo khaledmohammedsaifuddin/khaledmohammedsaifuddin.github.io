@@ -825,9 +825,6 @@ label.md-header__button[for="__search"] {
     text-align: center !important;        /* center text inside card */
   }
 
-  .research-card p {
-    display: none !important;
-  }
 }
 
 
