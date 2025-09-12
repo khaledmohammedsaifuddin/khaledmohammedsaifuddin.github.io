@@ -363,14 +363,18 @@ border: 2px solid white;
   margin: 0 !important;              /* Glued to cards */
   padding: 0;
 }
-
-/* Research grid */
+/* Research areas grid */
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(180px, 1fr)); /* smaller min size */
-  gap: 1rem;                                           /* tighter gap */
-  margin: 0 !important;
-  padding: 0;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .research-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }
 /* Research cards */
 .research-card {
@@ -812,15 +816,5 @@ label.md-header__button[for="__search"] {
 }
 
 
-@media (max-width: 768px) {
-  .cards-container {
-    grid-template-columns: 1fr 1fr !important;
-  }
-  
-  .research-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 1rem !important;
-  }
-}
+
 
