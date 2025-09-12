@@ -805,11 +805,7 @@ label.md-header__button[for="__search"] {
   overflow: hidden !important;
 }
 
-.md-banner a {
-  white-space: nowrap !important;   /* keep text on one line */
-  display: inline-block;            /* behave like a button */
-  text-align: center;
-}
+
 
 @media (max-width: 576px) {
   .research-grid {
