@@ -288,11 +288,6 @@ border: 2px solid white;
 }
 
 /* Mobile: 1 column */
-@media (max-width: 576px) {
-  .cards-container {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* Custom color scheme adjustments */
 :root {
