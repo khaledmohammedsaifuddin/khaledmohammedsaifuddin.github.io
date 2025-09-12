@@ -440,15 +440,26 @@ border: 2px solid white;
   margin: 2rem 0;
 }
 
-/* Mobile - Switch to grid layout */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .research-grid {
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 1rem !important;
-    justify-content: normal !important; /* reset flex properties */
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns */
+    gap: 0.8rem !important;
+  }
+
+  .research-card {
+    width: 100% !important;     /* take full width of grid cell */
+    max-width: 100% !important; /* kill 220px restriction */
+    margin: 0 !important;
+    padding: 0.8rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .research-card p {
+    display: none !important;   /* hide paragraph text */
   }
 }
+
 .research-box {
   background: #f5f7fa;
   border: 1px solid #ddd;
