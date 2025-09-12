@@ -813,27 +813,6 @@ label.md-header__button[for="__search"] {
 
 
 @media (max-width: 768px) {
-  .research-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important; /* 2 cards per row */
-    gap: 1rem !important;
-  }
-
-  .research-card {
-    padding: 0.5rem 0.5rem;
-    min-height: 120px; /* consistent height */
-  }
-
-  .research-card h3 {
-    font-size: 0.85rem;
-    margin: 0.3rem 0;
-  }
-
-  .research-card p {
-    display: none !important;                  /* hide paragraph text */
-  }
-
-@media (max-width: 768px) {
   .cards-container {
     grid-template-columns: 1fr 1fr !important;
   }
