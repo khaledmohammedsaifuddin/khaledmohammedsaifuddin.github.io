@@ -300,8 +300,8 @@ border: 2px solid white;
   --lab-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 .inline-logo {
-  height: 60px;        /* adjust size */
-  width: 90px;
+  height: 90px;        /* adjust size */
+  width: 110px;
   vertical-align: middle; /* aligns with text baseline */
   margin-bottom: 0 !important; 
 }
@@ -793,11 +793,7 @@ label.md-header__button[for="__drawer"] {
   height: 0 !important;
   overflow: hidden !important;
 }
-.inline-logo {
-  height: 32px;             /* Adjust display size */
-  vertical-align: middle;   /* Aligns with text */
-  image-rendering: -webkit-optimize-contrast; /* Helps browsers render sharper */
-}
+
 
 /* Search button */
 .md-header__button[for="__search"],
