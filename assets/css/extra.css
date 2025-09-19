@@ -301,7 +301,7 @@ border: 2px solid white;
 }
 .inline-logo {
   height: 90px;        /* adjust size */
-  width: 110px;
+  width: 120px;
   vertical-align: middle; /* aligns with text baseline */
   margin-bottom: 0 !important; 
 }
