@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://khaledlab.com/projects/">
+        <link rel="canonical" href="https://khaledlab.com/research/">
       
       
         <link rel="prev" href="../publications/">
@@ -460,7 +460,289 @@
 
   <h1>Research</h1>
 
+<style>
 
+:root{ --brand:#6c0633; --brand2:#8a0a42; --line:#eae8ef; --soft:#fafbff; }
+
+.alt-wrap{ margin:.6rem 0 1.2rem; }
+
+.alt-section{
+
+&nbsp; display:grid; grid-template-columns:1.05fr 1fr; gap:18px; align-items:start;
+
+&nbsp; background:#fff; border:1px solid var(--line); border-radius:14px;
+
+&nbsp; padding:16px; margin:18px 0; box-shadow:0 6px 18px rgba(0,0,0,.06);
+
+}
+
+.alt-media{ border-radius:10px; overflow:hidden; background:#f6f6f9 }
+
+.alt-media img{
+
+&nbsp; width:100%;
+
+&nbsp; height:auto;                /\* <-- FIXED \*/
+
+&nbsp; aspect-ratio:16/9;          /\* keeps nice shape; remove if not desired \*/
+
+&nbsp; object-fit:cover;
+
+&nbsp; display:block;
+
+}
+
+.alt-text h3{ margin:.2rem 0 .4rem; font-size:1.05rem }
+
+.alt-text .venue{ font-size:.88rem; opacity:.8 }
+
+.alt-text p{ margin:.45rem 0; line-height:1.55 }
+
+.alt-links a{ margin-right:.6rem; font-size:.92rem }
+
+.badge{ display:inline-block; background:#f3e8ff; color:#4b0082; border:1px solid #e0d5f9;
+
+&nbsp; padding:.22rem .55rem; border-radius:999px; font-size:.75rem; margin:.2rem .25rem 0 0 }
+
+.topic-band{
+
+&nbsp; background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff;
+
+&nbsp; padding:10px 14px; border-radius:12px; margin:22px 0 10px; box-shadow:0 8px 24px rgba(0,0,0,.12);
+
+}
+
+.topic-band strong{ font-weight:700 }
+
+.alt-wrap .alt-section:nth-child(even) .alt-media{ grid-column:2 }
+
+.alt-wrap .alt-section:nth-child(even) .alt-text{ grid-column:1 }
+
+@media (max-width:900px){
+
+&nbsp; .alt-section{ grid-template-columns:1fr }
+
+&nbsp; .alt-wrap .alt-section:nth-child(even) .alt-media,
+
+&nbsp; .alt-wrap .alt-section:nth-child(even) .alt-text{ grid-column:auto }
+
+}
+
+</style>
+
+<div class="topic-band"><strong>Topic:</strong> Expanding the Horizons of Hypergraph Neural Networks — <em>Advanced Methodologies</em></div>
+
+<div class="alt-wrap">
+
+
+
+&nbsp; <!-- Section 1 -->
+
+&nbsp; <section class="alt-section">
+
+&nbsp;   <div class="alt-media">
+
+&nbsp;     <!-- Remove leading slash; file should be at docs/assets/research\_photo/hypergcl.jpg -->
+
+&nbsp;     <img src="/assets/research\_photo/hypergcl.jpg" alt="HyperGCL overview diagram">
+
+&nbsp;   </div>
+
+&nbsp;   <div class="alt-text">
+
+&nbsp;     <h3>🔍 HyperGCL: Multi-Modal Graph Contrastive Learning via Learnable Hypergraph Views</h3>
+
+&nbsp;     <div class="venue">📘 IJCNN’25 \&nbsp;·\&nbsp; <span class="badge">Hypergraph GCL</span> <span class="badge">Adaptive Augmentation</span></div>
+
+&nbsp;     <p><strong>Overview.</strong> HyperGCL constructs three complementary hypergraph views from structure and attributes, then applies a learnable topology-aware augmentation. A network-aware contrastive loss aligns modalities while preserving important relations and filtering noise.</p>
+
+&nbsp;     <ul>
+
+&nbsp;       <li>Learnable adaptive topology augmentation</li>
+
+&nbsp;       <li>Three complementary hypergraph views</li>
+
+&nbsp;       <li>Consistent gains over GCL baselines on benchmarks</li>
+
+&nbsp;     </ul>
+
+&nbsp;     <p class="alt-links">📄 <a href="#" target="\_blank">Paper</a>  💻 <a href="#" target="\_blank">Code</a>  🧠 <a href="#" target="\_blank">Poster</a></p>
+
+&nbsp;   </div>
+
+&nbsp; </section>
+
+
+
+&nbsp; <!-- Section 2 -->
+
+&nbsp; <section class="alt-section">
+
+&nbsp;   <div class="alt-media">
+
+&nbsp;     <!-- Remove leading slash; file should be at docs/assets/figs/thtn\_poster.png -->
+
+&nbsp;     <img src="assets/figs/thtn\_poster.png" alt="THTN topology-guided transformer poster">
+
+&nbsp;   </div>
+
+&nbsp;   <div class="alt-text">
+
+&nbsp;     <h3>🧭 THTN: Topology-Guided Hypergraph Transformer Network</h3>
+
+&nbsp;     <div class="venue">📘 Stanford Graph Learning Workshop’24 · PRICAI’25 \&nbsp;·\&nbsp; <span class="badge">Transformers</span> <span class="badge">Topology-Aware Attention</span></div>
+
+&nbsp;     <p><strong>Overview.</strong> THTN injects structural priors (motifs, centrality) into attention weights to better capture higher-order hypergraph structure, improving classification and robustness.</p>
+
+&nbsp;     <ul>
+
+&nbsp;       <li>Guided attention with graph topology</li>
+
+&nbsp;       <li>Higher-order structural capture</li>
+
+&nbsp;       <li>Improved accuracy across datasets</li>
+
+&nbsp;     </ul>
+
+&nbsp;     <p class="alt-links">📄 <a href="#" target="\_blank">Paper</a>  💻 <a href="#" target="\_blank">Code</a></p>
+
+&nbsp;   </div>
+
+&nbsp; </section>
+
+
+
+</div>
+
+<div class="topic-band"><strong>Topic:</strong> Tackling <em>Oversmoothing</em> in GNN</div>
+
+<div class="alt-wrap">
+
+
+
+&nbsp; <section class="alt-section">
+
+&nbsp;   <div class="alt-media">
+
+&nbsp;     <!-- docs/assets/figs/tgs\_arch.png -->
+
+&nbsp;     <img src="assets/figs/tgs\_arch.png" alt="TGS architecture figure">
+
+&nbsp;   </div>
+
+&nbsp;   <div class="alt-text">
+
+&nbsp;     <h3>🪓 TGS: Tackling Oversmoothing in GNN via Graph Sparsification</h3>
+
+&nbsp;     <div class="venue">📘 ECML PKDD’24 \&nbsp;·\&nbsp; <span class="badge">Truss-based Pruning</span> <span class="badge">Expressivity</span></div>
+
+&nbsp;     <p><strong>Overview.</strong> Truss-guided edge pruning removes redundant connections in dense regions to reduce representation collapse while keeping essential structure intact.</p>
+
+&nbsp;     <ul>
+
+&nbsp;       <li>Alleviates excessive mixing in deep layers</li>
+
+&nbsp;       <li>Works with GIN, SAGPool, DiffPool, GMT, HGP-SL</li>
+
+&nbsp;       <li>Improves node/graph classification accuracy</li>
+
+&nbsp;     </ul>
+
+&nbsp;     <p class="alt-links">📄 <a href="#" target="\_blank">Paper</a>  💻 <a href="#" target="\_blank">Code</a></p>
+
+&nbsp;   </div>
+
+&nbsp; </section>
+
+
+
+</div>
+
+<div class="topic-band"><strong>Topic:</strong> Dynamic Graph Learning</div>
+
+<div class="alt-wrap">
+
+
+
+&nbsp; <section class="alt-section">
+
+&nbsp;   <div class="alt-media">
+
+&nbsp;     <!-- docs/assets/figs/dygcl\_diagram.png -->
+
+&nbsp;     <img src="assets/figs/dygcl\_diagram.png" alt="DyGCL local/global view diagram">
+
+&nbsp;   </div>
+
+&nbsp;   <div class="alt-text">
+
+&nbsp;     <h3>⏱️ DyGCL: Dynamic Graph Contrastive Learning for Event Prediction</h3>
+
+&nbsp;     <div class="venue">📘 IEEE BigData’24 \&nbsp;·\&nbsp; <span class="badge">Temporal Contrast</span> <span class="badge">Local–Global Views</span></div>
+
+&nbsp;     <p><strong>Overview.</strong> Dual local/global encoders with a temporal contrastive objective capture short- and long-range dynamics for robust event prediction.</p>
+
+&nbsp;     <ul>
+
+&nbsp;       <li>Local \& global temporal views</li>
+
+&nbsp;       <li>Improved forecasting of unrest/disease events</li>
+
+&nbsp;     </ul>
+
+&nbsp;     <p class="alt-links">📄 <a href="#" target="\_blank">Paper</a>  💻 <a href="#" target="\_blank">Code</a></p>
+
+&nbsp;   </div>
+
+&nbsp; </section>
+
+
+
+</div>
+
+<div class="topic-band"><strong>Topic:</strong> Reinforcement Learning-based Hypergraph Models</div>
+
+<div class="alt-wrap">
+
+
+
+&nbsp; <section class="alt-section">
+
+&nbsp;   <div class="alt-media">
+
+&nbsp;     <!-- docs/assets/figs/rl\_hyperpredict.png -->
+
+&nbsp;     <img src="assets/figs/rl\_hyperpredict.png" alt="RL-HyperPredict illustration">
+
+&nbsp;   </div>
+
+&nbsp;   <div class="alt-text">
+
+&nbsp;     <h3>🎯 RL-HyperPredict: Hyperedge Membership via Sequential Decision-Making</h3>
+
+&nbsp;     <div class="venue"><span class="badge">RL</span> <span class="badge">Hyperedge Prediction</span></div>
+
+&nbsp;     <p><strong>Overview.</strong> Frames hyperedge construction as an RL problem: an agent sequentially selects nodes, receiving rewards for accurate memberships, yielding interpretable policies.</p>
+
+&nbsp;     <ul>
+
+&nbsp;       <li>Adaptive node-selection policy</li>
+
+&nbsp;       <li>Interpretable membership signals</li>
+
+&nbsp;       <li>Outperforms heuristic baselines</li>
+
+&nbsp;     </ul>
+
+&nbsp;     <p class="alt-links">📄 <a href="#" target="\_blank">Paper</a>  💻 <a href="#" target="\_blank">Code</a></p>
+
+&nbsp;   </div>
+
+&nbsp; </section>
+
+
+
+</div>
 
 
 
