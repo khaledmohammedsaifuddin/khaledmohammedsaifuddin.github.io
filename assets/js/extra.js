@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (firstTab) {
                 const logoImg = document.createElement('img');
-                logoImg.src = '/assets/favicon_2.png';
+                logoImg.src = '/assets/favicon.png';
                 logoImg.alt = 'KhaledLab';
                 logoImg.style.cssText = `
                     height: 35px;
