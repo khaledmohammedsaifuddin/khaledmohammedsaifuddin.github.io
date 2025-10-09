@@ -501,8 +501,23 @@
 .alt-text .venue{ font-size:.88rem; opacity:.8 }
 .alt-text p{ margin:.45rem 0; line-height:1.55 }
 .alt-links a{ margin-right:.6rem; font-size:.92rem }
-.badge{ display:inline-block; background:#f3e8ff; color:#4b0082; border:1px solid #e0d5f9;
-  padding:.22rem .55rem; border-radius:999px; font-size:.75rem; margin:.2rem .25rem 0 0 }
+.badge{ 
+  display:inline-block; 
+  background:#ccf0ff; 
+  color:#000000; 
+  border:1px solid #e8eaf6;
+  padding:.22rem .55rem; 
+  border-radius:999px; 
+  font-size:.75rem; 
+  margin:.2rem .25rem 0 0;
+  transition: all 0.2s ease;
+}
+
+.badge:hover{
+  background:#c5cae9;
+  color:#283593;
+  border:1px solid #c5cae9;
+}
 .topic-band{
   background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff;
   padding:10px 14px; border-radius:12px; margin:22px 0 10px; box-shadow:0 8px 24px rgba(0,0,0,.12);
