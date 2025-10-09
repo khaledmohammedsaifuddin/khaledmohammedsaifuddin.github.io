@@ -460,289 +460,356 @@
 
   <h1>Research</h1>
 
-<style>
+<!-- PhD Recruitment Banner -->
 
-:root{ --brand:#6c0633; --brand2:#8a0a42; --line:#eae8ef; --soft:#fafbff; }
+<div style="font-family: Arial, sans-serif; color: #222; background: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); margin: 20px auto; padding: 0; max-width: 90%;">
 
-.alt-wrap{ margin:.6rem 0 1.2rem; }
 
-.alt-section{
 
-&nbsp; display:grid; grid-template-columns:1.05fr 1fr; gap:18px; align-items:start;
 
-&nbsp; background:#fff; border:1px solid var(--line); border-radius:14px;
 
-&nbsp; padding:16px; margin:18px 0; box-shadow:0 6px 18px rgba(0,0,0,.06);
 
-}
 
-.alt-media{ border-radius:10px; overflow:hidden; background:#f6f6f9 }
+<!-- Header -->
 
-.alt-media img{
 
-&nbsp; width:100%;
 
-&nbsp; height:auto;                /\* <-- FIXED \*/
+<div style="background: linear-gradient(135deg, #6c0633 0%, #8a0a42 100%); color: white; padding: 18px 20px; border-radius: 10px 10px 0 0;">
 
-&nbsp; aspect-ratio:16/9;          /\* keeps nice shape; remove if not desired \*/
 
-&nbsp; object-fit:cover;
 
-&nbsp; display:block;
+<h2 style="margin: 0; font-size: 20px;">🎓 Fully Funded PhD Positions in Computer Science</h2>
 
-}
 
-.alt-text h3{ margin:.2rem 0 .4rem; font-size:1.05rem }
 
-.alt-text .venue{ font-size:.88rem; opacity:.8 }
-
-.alt-text p{ margin:.45rem 0; line-height:1.55 }
-
-.alt-links a{ margin-right:.6rem; font-size:.92rem }
-
-.badge{ display:inline-block; background:#f3e8ff; color:#4b0082; border:1px solid #e0d5f9;
-
-&nbsp; padding:.22rem .55rem; border-radius:999px; font-size:.75rem; margin:.2rem .25rem 0 0 }
-
-.topic-band{
-
-&nbsp; background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff;
-
-&nbsp; padding:10px 14px; border-radius:12px; margin:22px 0 10px; box-shadow:0 8px 24px rgba(0,0,0,.12);
-
-}
-
-.topic-band strong{ font-weight:700 }
-
-.alt-wrap .alt-section:nth-child(even) .alt-media{ grid-column:2 }
-
-.alt-wrap .alt-section:nth-child(even) .alt-text{ grid-column:1 }
-
-@media (max-width:900px){
-
-&nbsp; .alt-section{ grid-template-columns:1fr }
-
-&nbsp; .alt-wrap .alt-section:nth-child(even) .alt-media,
-
-&nbsp; .alt-wrap .alt-section:nth-child(even) .alt-text{ grid-column:auto }
-
-}
-
-</style>
-
-<div class="topic-band"><strong>Topic:</strong> Expanding the Horizons of Hypergraph Neural Networks — <em>Advanced Methodologies</em></div>
-
-<div class="alt-wrap">
-
-
-
-&nbsp; <!-- Section 1 -->
-
-&nbsp; <section class="alt-section">
-
-&nbsp;   <div class="alt-media">
-
-&nbsp;     <!-- Remove leading slash; file should be at docs/assets/research\_photo/hypergcl.jpg -->
-
-&nbsp;     <img src="/assets/research\_photo/hypergcl.jpg" alt="HyperGCL overview diagram">
-
-&nbsp;   </div>
-
-&nbsp;   <div class="alt-text">
-
-&nbsp;     <h3>🔍 HyperGCL: Multi-Modal Graph Contrastive Learning via Learnable Hypergraph Views</h3>
-
-&nbsp;     <div class="venue">📘 IJCNN’25 \&nbsp;·\&nbsp; <span class="badge">Hypergraph GCL</span> <span class="badge">Adaptive Augmentation</span></div>
-
-&nbsp;     <p><strong>Overview.</strong> HyperGCL constructs three complementary hypergraph views from structure and attributes, then applies a learnable topology-aware augmentation. A network-aware contrastive loss aligns modalities while preserving important relations and filtering noise.</p>
-
-&nbsp;     <ul>
-
-&nbsp;       <li>Learnable adaptive topology augmentation</li>
-
-&nbsp;       <li>Three complementary hypergraph views</li>
-
-&nbsp;       <li>Consistent gains over GCL baselines on benchmarks</li>
-
-&nbsp;     </ul>
-
-&nbsp;     <p class="alt-links">📄 <a href="#" target="\_blank">Paper</a>  💻 <a href="#" target="\_blank">Code</a>  🧠 <a href="#" target="\_blank">Poster</a></p>
-
-&nbsp;   </div>
-
-&nbsp; </section>
-
-
-
-&nbsp; <!-- Section 2 -->
-
-&nbsp; <section class="alt-section">
-
-&nbsp;   <div class="alt-media">
-
-&nbsp;     <!-- Remove leading slash; file should be at docs/assets/figs/thtn\_poster.png -->
-
-&nbsp;     <img src="assets/figs/thtn\_poster.png" alt="THTN topology-guided transformer poster">
-
-&nbsp;   </div>
-
-&nbsp;   <div class="alt-text">
-
-&nbsp;     <h3>🧭 THTN: Topology-Guided Hypergraph Transformer Network</h3>
-
-&nbsp;     <div class="venue">📘 Stanford Graph Learning Workshop’24 · PRICAI’25 \&nbsp;·\&nbsp; <span class="badge">Transformers</span> <span class="badge">Topology-Aware Attention</span></div>
-
-&nbsp;     <p><strong>Overview.</strong> THTN injects structural priors (motifs, centrality) into attention weights to better capture higher-order hypergraph structure, improving classification and robustness.</p>
-
-&nbsp;     <ul>
-
-&nbsp;       <li>Guided attention with graph topology</li>
-
-&nbsp;       <li>Higher-order structural capture</li>
-
-&nbsp;       <li>Improved accuracy across datasets</li>
-
-&nbsp;     </ul>
-
-&nbsp;     <p class="alt-links">📄 <a href="#" target="\_blank">Paper</a>  💻 <a href="#" target="\_blank">Code</a></p>
-
-&nbsp;   </div>
-
-&nbsp; </section>
+<p style="margin: 4px 0 0; font-size: 13px;">Southern Illinois University, Carbondale (SIUC) • Starting Spring 2026 and beyond</p>
 
 
 
 </div>
 
-<div class="topic-band"><strong>Topic:</strong> Tackling <em>Oversmoothing</em> in GNN</div>
-
-<div class="alt-wrap">
 
 
 
-&nbsp; <section class="alt-section">
-
-&nbsp;   <div class="alt-media">
-
-&nbsp;     <!-- docs/assets/figs/tgs\_arch.png -->
-
-&nbsp;     <img src="assets/figs/tgs\_arch.png" alt="TGS architecture figure">
-
-&nbsp;   </div>
-
-&nbsp;   <div class="alt-text">
-
-&nbsp;     <h3>🪓 TGS: Tackling Oversmoothing in GNN via Graph Sparsification</h3>
-
-&nbsp;     <div class="venue">📘 ECML PKDD’24 \&nbsp;·\&nbsp; <span class="badge">Truss-based Pruning</span> <span class="badge">Expressivity</span></div>
-
-&nbsp;     <p><strong>Overview.</strong> Truss-guided edge pruning removes redundant connections in dense regions to reduce representation collapse while keeping essential structure intact.</p>
-
-&nbsp;     <ul>
-
-&nbsp;       <li>Alleviates excessive mixing in deep layers</li>
-
-&nbsp;       <li>Works with GIN, SAGPool, DiffPool, GMT, HGP-SL</li>
-
-&nbsp;       <li>Improves node/graph classification accuracy</li>
-
-&nbsp;     </ul>
-
-&nbsp;     <p class="alt-links">📄 <a href="#" target="\_blank">Paper</a>  💻 <a href="#" target="\_blank">Code</a></p>
-
-&nbsp;   </div>
-
-&nbsp; </section>
 
 
 
-</div>
-
-<div class="topic-band"><strong>Topic:</strong> Dynamic Graph Learning</div>
-
-<div class="alt-wrap">
+<!-- Body -->
 
 
 
-&nbsp; <section class="alt-section">
+<div style="padding: 20px; font-size: 14px; line-height: 1.35;">
 
-&nbsp;   <div class="alt-media">
 
-&nbsp;     <!-- docs/assets/figs/dygcl\_diagram.png -->
 
-&nbsp;     <img src="assets/figs/dygcl\_diagram.png" alt="DyGCL local/global view diagram">
 
-&nbsp;   </div>
 
-&nbsp;   <div class="alt-text">
 
-&nbsp;     <h3>⏱️ DyGCL: Dynamic Graph Contrastive Learning for Event Prediction</h3>
 
-&nbsp;     <div class="venue">📘 IEEE BigData’24 \&nbsp;·\&nbsp; <span class="badge">Temporal Contrast</span> <span class="badge">Local–Global Views</span></div>
+<div style="background: #e0e9ff; padding: 10px 14px; border-radius: 6px; margin-bottom: 12px;">
 
-&nbsp;     <p><strong>Overview.</strong> Dual local/global encoders with a temporal contrastive objective capture short- and long-range dynamics for robust event prediction.</p>
 
-&nbsp;     <ul>
 
-&nbsp;       <li>Local \& global temporal views</li>
+<p>Join <strong>KhaledLab</strong> at SIUC — an R1 Carnegie Classification institution recognized for outstanding research excellence.</p>
 
-&nbsp;       <li>Improved forecasting of unrest/disease events</li>
 
-&nbsp;     </ul>
 
-&nbsp;     <p class="alt-links">📄 <a href="#" target="\_blank">Paper</a>  💻 <a href="#" target="\_blank">Code</a></p>
+</br>
 
-&nbsp;   </div>
 
-&nbsp; </section>
+
+<p style="margin-bottom: 6px;">We are looking for highly motivated Ph.D. students in Computer Science to work on cutting-edge topics in:</p>
+
+
+
+<ul style="margin: 4px 0 14px 20px; line-height: 1.15; padding: 0;">
+
+
+
+<li style="margin: 0; padding: 0;">Graph Machine Learning, Graph GenAI, Graph Mining, Network Science</li>
+
+
+
+<li style="margin: 0; padding: 0;">Bioinformatics, Network Medicine, Health Data Analytics</li>
+
+
+
+<li style="margin: 0; padding: 0;">Visual and Language Reasoning, Event Understanding, Social Network Analysis</li>
+
+
+
+</ul>
 
 
 
 </div>
 
-<div class="topic-band"><strong>Topic:</strong> Reinforcement Learning-based Hypergraph Models</div>
-
-<div class="alt-wrap">
 
 
 
-&nbsp; <section class="alt-section">
 
-&nbsp;   <div class="alt-media">
 
-&nbsp;     <!-- docs/assets/figs/rl\_hyperpredict.png -->
 
-&nbsp;     <img src="assets/figs/rl\_hyperpredict.png" alt="RL-HyperPredict illustration">
+<!-- Vision Section -->
 
-&nbsp;   </div>
 
-&nbsp;   <div class="alt-text">
 
-&nbsp;     <h3>🎯 RL-HyperPredict: Hyperedge Membership via Sequential Decision-Making</h3>
 
-&nbsp;     <div class="venue"><span class="badge">RL</span> <span class="badge">Hyperedge Prediction</span></div>
 
-&nbsp;     <p><strong>Overview.</strong> Frames hyperedge construction as an RL problem: an agent sequentially selects nodes, receiving rewards for accurate memberships, yielding interpretable policies.</p>
 
-&nbsp;     <ul>
 
-&nbsp;       <li>Adaptive node-selection policy</li>
+<p style="margin-bottom: 10px;">
 
-&nbsp;       <li>Interpretable membership signals</li>
 
-&nbsp;       <li>Outperforms heuristic baselines</li>
 
-&nbsp;     </ul>
+This position offers a unique chance to contribute to both <em>theoretical advancements</em>—
 
-&nbsp;     <p class="alt-links">📄 <a href="#" target="\_blank">Paper</a>  💻 <a href="#" target="\_blank">Code</a></p>
 
-&nbsp;   </div>
 
-&nbsp; </section>
+developing new algorithms, models, and frameworks
+
+
+
+and <em>applied research</em>, where these innovations will be leveraged to address 
+
+
+
+real-world challenges in science, medicine, and technology. Students will gain 
+
+
+
+hands-on experience with cutting-edge AI methods while also building 
+
+
+
+cross-disciplinary collaborations that maximize both scientific impact and career development.
+
+
+
+</p>
+
+
+
+
+
+
+
+<!-- Requirements -->
+
+
+
+<div style="background: #f5f9ff; padding: 10px 14px; border-radius: 6px; margin-bottom: 12px;">
+
+
+
+<h3 style="margin: 0 0 6px; font-size: 14px; color: #003366;">Basic Requirements</h3>
+
+
+
+<ul style="margin: 0 0 0 18px; line-height: 1.15; padding: 0;">
+
+
+
+<li style="margin: 0; padding: 0;">BS/MS in Computer Science or related fields</li>
+
+
+
+<li style="margin: 0; padding: 0;">Strong programming skills (Python, PyTorch, C, C++)</li>
+
+
+
+<li style="margin: 0; padding: 0;">Solid understanding of machine learning and deep learning fundamentals</li>
+
+
+
+<li style="margin: 0; padding: 0;">Excellent analytical thinking and problem-solving skills</li>
+
+
+
+<li style="margin: 0; padding: 0;">Strong written and verbal communication skills</li>
+
+
+
+<li style="margin: 0; padding: 0;">Ability to work independently and in collaborative teams</li>
+
+
+
+</ul>
 
 
 
 </div>
+
+
+
+
+
+
+
+<!-- Desired Qualifications -->
+
+
+
+<div style="background: #f9f7ff; padding: 10px 14px; border-radius: 6px; margin-bottom: 12px;">
+
+
+
+<h3 style="margin: 0 0 6px; font-size: 14px; color: #4b0082;">Desired Qualifications</h3>
+
+
+
+<ul style="margin: 0 0 0 18px; line-height: 1.15; padding: 0;">
+
+
+
+<li style="margin: 0; padding: 0;">Familiarity with Graph AI and Generative AI</li>
+
+
+
+<li style="margin: 0; padding: 0;">Experience in publishing research papers</li>
+
+
+
+<li style="margin: 0; padding: 0;">Hands-on experience with transformer models or large language models (LLMs) is a plus</li>
+
+
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- How to Apply -->
+
+
+
+<h3 style="margin: 8px 0 6px; font-size: 14px; color: #333;">How to Apply</h3>
+
+
+
+<p style="margin: 0 0 6px;">Send the following documents to Dr. Khaled Mohammed Saifuddin:</p>
+
+
+
+<ul style="margin: 4px 0 12px 20px; line-height: 1.15; padding: 0;">
+
+
+
+<li style="margin: 0; padding: 0;">CV</li>
+
+
+
+<li style="margin: 0; padding: 0;">Transcript</li>
+
+
+
+<li style="margin: 0; padding: 0;">GRE <strong>(mandatory)</strong></li>
+
+
+
+<li style="margin: 0; padding: 0;">English Test Scores</li>
+
+
+
+</ul>
+
+
+
+
+
+
+
+<p style="font-size: 12px; margin-top: -4px; margin-bottom: 12px;">In the subject line, add: 'Prospective PhD Student'</p>
+
+
+
+
+
+
+
+<div style="text-align: center; margin-top: 10px;">
+
+
+
+<a href="mailto:khaledmohammed.saifuddin@siu.edu"
+
+
+
+style="display: inline-block; background: #003366; color: #fff; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: bold;">
+
+
+
+📧 k.saifuddin@siu.edu
+
+
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<!-- For SIUC Students -->
+
+<div style="margin: 20px auto; max-width: 90%; font-family: Arial, sans-serif; font-size: 13px; color: #355; background: #fffddf; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); padding: 14px 18px;">
+
+
+
+&nbsp; <h3 style="margin: 0 0 8px; font-size: 15px; color: #660033;">📢 For SIUC Students</h3>
+
+
+
+&nbsp; <p style="margin: 0 0 6px;">
+
+&nbsp;   Any <strong>Masters or Undergraduate student at SIUC</strong> who is interested in 
+
+&nbsp;   our research areas is encouraged to contact the Lab director. 
+
+&nbsp; </p>
+
+
+
+&nbsp;</div>
+
+<!-- Campus Photos -->
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 100%; margin: 0 auto;">
+
+
+
+&nbsp; <img src="/assets/campus\_photo/siu\_1.jpg" alt="Campus 1" style="width: 100%; height: 220px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 8px rgba(0,0,0,0.1);">
+
+&nbsp; <img src="/assets/campus\_photo/siu\_2.jpg" alt="Campus 2" style="width: 100%; height: 220px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 8px rgba(0,0,0,0.1);">
+
+
+
+&nbsp; <img src="/assets/campus\_photo/siu\_3.jpg" alt="Campus 3" style="width: 100%; height: 220px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 8px rgba(0,0,0,0.1);">
+
+&nbsp; <img src="/assets/campus\_photo/siu\_4.jpg" alt="Campus 4" style="width: 100%; height: 220px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 8px rgba(0,0,0,0.1);">
+
+
+
+</div>
+
+<p></br></p>
+<p style="font-size: 11px; text-align: center; color: #666;">
+
+All the beautiful campus photos were collected from SIUC social media pages.
+
+</p>
 
 
 
