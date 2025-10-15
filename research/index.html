@@ -468,6 +468,10 @@
 <title>Research Projects</title>
 <style>
 :root{ --brand:#6c0633; --brand2:#8a0a42; --line:#eae8ef; --soft:#fafbff; }
+*{box-sizing:border-box}
+html,body{scroll-behavior:smooth}
+
+/* --- existing styles --- */
 .alt-wrap{ margin:.6rem 0 1.2rem; }
 .alt-section{
   display:grid; grid-template-columns:1.05fr 1fr; gap:18px; align-items:start;
@@ -503,7 +507,7 @@
 .alt-links a{ margin-right:.6rem; font-size:.92rem }
 .badge{ 
   display:inline-block; 
-  background:#ccf0ff; 
+  background:#ccddee; 
   color:#000000; 
   border:1px solid #e8eaf6;
   padding:.22rem .55rem; 
@@ -512,15 +516,13 @@
   margin:.2rem .25rem 0 0;
   transition: all 0.2s ease;
 }
-
 .badge:hover{
-  background:#c5cae9;
-  color:#283593;
-  border:1px solid #c5cae9;
+  background:#c5cae9; color:#283593; border:1px solid #c5cae9;
 }
 .topic-band{
-  background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff;
+  background:linear-gradient(135deg,#AAAACC,#DDDDEA); color:#0b3d5c;
   padding:10px 14px; border-radius:12px; margin:22px 0 10px; box-shadow:0 8px 24px rgba(0,0,0,.12);
+  scroll-margin-top:150px; /* so anchors aren't hidden under sticky nav */
 }
 .topic-band strong{ font-weight:700 }
 .alt-section:nth-child(odd) .alt-media{ grid-column:1; grid-row:1 }
@@ -534,11 +536,45 @@
   .alt-section:nth-child(even) .alt-media,
   .alt-section:nth-child(even) .alt-text{ grid-column:auto; grid-row:auto }
 }
+
+/* --- NEW: topic pill nav --- */
+.topic-nav{
+  position:sticky; top:0; z-index:50; background:rgba(255,255,255,.9);
+  backdrop-filter:saturate(1.2) blur(6px);
+  border-bottom:1px solid var(--line);
+  padding:10px 8px; margin-bottom:10px;
+}
+.topic-nav .nav-inner{
+  display:flex; flex-wrap:wrap; gap:10px; justify-content:center; max-width:1100px; margin:0 auto;
+}
+.pill{
+  appearance:none; border:none; cursor:pointer;
+  background:#ccf0ff; color:#000;
+  border:1px solid #e8eaf6; border-radius:999px;
+  padding:8px 14px; font-size:.9rem; line-height:1;
+  transition:all .2s ease;
+}
+.pill:hover{ background:#c5cae9; color:#283593; border-color:#c5cae9; transform:translateY(-1px)}
+.pill.active{ background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff; border-color:transparent; box-shadow:0 6px 14px rgba(0,0,0,.15)}
 </style>
 </head>
 <body>
 
-<div class="topic-band"><strong>Topic:</strong> Expanding the Horizons of Hypergraph Neural Networks — <em>Advanced Methodologies</em></div>
+<!-- NEW: Pill Navigation -->
+<nav class="topic-nav" aria-label="Research topic navigation">
+  <div class="nav-inner">
+    <button class="pill" data-target="hypergnn">Advanced HyperGNN</button>
+    <button class="pill" data-target="bottleneck">Structural/Information Bottlenecks</button>
+    <button class="pill" data-target="drug">Drug Discovery</button>
+<button class="pill" data-target="hypergnn">Multimodal Learning</button>
+    <button class="pill" data-target="sequence">Sequence Learning</button>
+    <button class="pill" data-target="dynamic">Dynamic GNN</button>
+    <button class="pill" data-target="social">Social Network Mining</button>
+  </div>
+</nav>
+
+<!-- TOPIC 1 -->
+<div id="hypergnn" class="topic-band"><strong>Topic:</strong> Expanding the Horizons of Hypergraph Neural Networks — <em>Advanced Methodologies</em></div>
 <div class="alt-wrap">
 
   <!-- Section 1 -->
@@ -567,13 +603,13 @@ nodes and hyperedges into regular attribute-based semantic attention.</div>
       <h3>THTN: Topology-Guided Hypergraph Transformer Network</h3>
       <div class="venue">📘 Stanford Graph Learning Workshop'24 · PRICAI'25 &nbsp;·&nbsp; <span class="badge">Transformers</span> <span class="badge">Structure-Aware Attention</span></div>
       <p><strong>Overview. </strong> THTN, a topology-guided hypergraph transformer that captures higher-order relations between nodes in a network by representing subgraphs as hyperedges. Then, it introduces a structure-aware attention mechanism that jointly considers semantic and topological cues to identify critical nodes and hyperedges. In addition, a structural–spatial encoding module integrates graph topology and spatial context into node embeddings, enhancing the model’s ability to capture both local and global dependencies. </p>
-          </div>
+    </div>
   </section>
 
 </div>
 
-<div class="topic-band"><strong>Topic:</strong> Tackling <em>Oversmoothing</em> in GNN</div>
-
+<!-- TOPIC 2 -->
+<div id="bottleneck" class="topic-band"><strong>Topic:</strong> Tackling <em>Oversmoothing</em> in GNN</div>
 <div class="alt-wrap">
   <section class="alt-section">
     <div class="alt-media">
@@ -584,12 +620,12 @@ nodes and hyperedges into regular attribute-based semantic attention.</div>
       <h3>TGS: Tackling Oversmoothing in GNN via Graph Sparsification</h3>
       <div class="venue">📘 ECML PKDD'24 &nbsp;·&nbsp; <span class="badge">Truss-based Pruning</span> <span class="badge">Expressivity</span></div>
       <p><strong>Overview. </strong> Truss-based graph sparsification (TGS) model to mitigate the oversmoothing problem in deep GNNs. By pruning redundant edges from dense graph regions, TGS preserves essential topological structures while preventing excessive feature mixing.</p>
-          </div>
+    </div>
   </section>
 </div>
 
-<div class="topic-band"><strong>Topic:</strong> Revolutionizing Drug Discovery with Novel Graph/Hypergraph Learning Approaches</div>
-
+<!-- TOPIC 3 -->
+<div id="drug" class="topic-band"><strong>Topic:</strong> Revolutionizing Drug Discovery with Novel Graph/Hypergraph Learning Approaches</div>
 <div class="alt-wrap">
 
   <section class="alt-section">
@@ -598,35 +634,39 @@ nodes and hyperedges into regular attribute-based semantic attention.</div>
       <div class="img-caption">System architecture of the proposed method. The First step is to construct a hypergraph network of drugs where each drug is a hyperedge, and
 frequent chemical substructures of drugs are the nodes. The second step is to design a hypergraph neural network (HyGNN) model with an attention-based
 encoder for hyperedge (drug) representation learning and decoder for DDI learning</div>
+
     </div>
     <div class="alt-text">
       <h3>HyGNN: Hypergraph Neural Network for Drug Representation</h3>
       <div class="venue">📘 ICDE'23 &nbsp;·&nbsp; <span class="badge">Drug Discovery</span> <span class="badge">HyperGNN</span></div>
       <p><strong>Overview. </strong> HyGNN is a novel hypergraph neural network designed for accurate drug–drug interaction (DDI) prediction using only SMILES representations. It constructs a hypergraph from molecular substructures extracted from SMILES strings, allowing the model to capture complex chemical relationships beyond pairwise similarities. HyGNN introduces an attention-based hypergraph edge encoder to generate expressive hyperedge representations and a decoder to predict interactions between drug pairs. Extensive experiments demonstrate that HyGNN achieves superior performance across multiple evaluation metrics, including F1 score, ROC-AUC, and PR-AUC, and generalizes effectively to new and unseen drugs, highlighting its robustness and practical applicability in drug discovery.</p>
-          </div>
+
+    </div>
   </section>
 
   <section class="alt-section">
     <div class="alt-media">
       <img src="/assets/research_photo/hetan.jpg" alt="HeTriNet figure" loading="lazy">
       <div class="img-caption">The HeTAN workflow comprises three steps: Heterogeneous Graph Construction, Encoder, and Decoder. Initially, a
-heterogeneous network is built with drug, target, and disease nodes connected by drug-target or drug-disease edges. Targetdisease
+heterogeneous network is built with drug, target, and disease nodes connected by drug-target or drug-disease edges. Target disease
 connections (dashed lines) are inferred from shared drug associations. We introduce Triplet Message Passing (TMP)
 and Triplet-wise attention to generate node representations. Finally, using concatenated node representations, a Multi-Layer
 Perceptron (MLP) predicts drug-target-disease interactions.</div>
+
     </div>
     <div class="alt-text">
       <h3>HeTriNet: Heterogeneous Graph Triplet Attention Network</h3>
       <div class="venue">📘 DSAA'24 &nbsp;·&nbsp; <span class="badge">Triplet Attention</span> <span class="badge">HGNN</span></div>
-      <p><strong>Overview. </strong> HeTAN is a heterogeneous graph triplet attention network that models complex interactions among drugs, targets, and diseases. By introducing triplet message passing and triplet-wise attention, it captures higher-order relationships beyond pairwise interactions. This design enables HeTAN to uncover meaningful drug–target–disease associations and achieve superior performance on real-world biomedical datasets.
+     <p><strong>Overview. </strong> HeTAN is a heterogeneous graph triplet attention network that models complex interactions among drugs, targets, and diseases. By introducing triplet message passing and triplet-wise attention, it captures higher-order relationships beyond pairwise interactions. This design enables HeTAN to uncover meaningful drug–target–disease associations and achieve superior performance on real-world biomedical datasets.
 </p>
-          </div>
+
+    </div>
   </section>
 
 </div>
 
-<div class="topic-band"><strong>Topic:</strong> Advancing Sequence Data Analysis through Innovative Graph/Hypergraph Learning Models</div>
-
+<!-- TOPIC 4 -->
+<div id="sequence" class="topic-band"><strong>Topic:</strong> Advancing Sequence Data Analysis through Innovative Graph/Hypergraph Learning Models</div>
 <div class="alt-wrap">
 
   <section class="alt-section">
@@ -636,69 +676,112 @@ Perceptron (MLP) predicts drug-target-disease interactions.</div>
 DNA) is a hyperedge, and the (frequent) subsequences of sequences are the nodes. The second step is the Sequence Hypergraph
 Attention Network, namely Seq-HyGAN, which generates the representations of sequences while giving more attention to the
 important subsequences and learning the label of the sequences.</div>
+
     </div>
     <div class="alt-text">
       <h3>Seq-HyGAN: Sequence understanding using Hypergraph Attention Network</h3>
       <div class="venue">📘 CIKM'23 &nbsp;·&nbsp; <span class="badge">Sequence Analysis</span> <span class="badge">HyperGNN</span></div>
       <p><strong>Overview. </strong>Seq-HyGAN is a sequence hypergraph attention network that models higher-order relationships among subsequences for sequence classification. By capturing both local and global dependencies through attention-based learning, it produces richer representations and achieves superior accuracy over existing approaches.
 </p>
-          </div>
+
+    </div>
   </section>
 
   <section class="alt-section">
     <div class="alt-media">
       <img src="/assets/research_photo/drug_abuse.jpg" alt="Drug abuse network analysis" loading="lazy">
       <div class="img-caption">Overview of the proposed graph-based Drug Abuse detection framework. The process includes data collection and preprocessing, construction of corpus- and document-level text graphs to capture relationships, and the use of Graph Neural Networks (GNNs) for effective classification of DA-related tweets.</div>
+
     </div>
     <div class="alt-text">
       <h3>Drug Abuse Detection from Social Network via Graph Learning</h3>
       <div class="venue">📘 BigData'21 &nbsp;·&nbsp;<span class="badge">GNN</span> <span class="badge">Text Understanding</span></div>
       <p><strong>Overview. </strong>This work detects drug abuse (DA) events from social media using graph neural networks (GNNs). By constructing text graphs from Twitter data at corpus and document levels, it captures word- and document-level relationships for effective classification. Experimental results show that GNN-based models outperform traditional machine learning and deep learning approaches in identifying DA-related content.</p>
-          </div>
+
+    </div>
   </section>
 
 </div>
 
-
-<div class="topic-band"><strong>Topic:</strong> Dynamic Graph Neural Network for Event Understanding</div>
-
+<!-- TOPIC 5 -->
+<div id="dynamic" class="topic-band"><strong>Topic:</strong> Dynamic Graph Neural Network for Event Understanding</div>
 <div class="alt-wrap">
-
   <section class="alt-section">
     <div class="alt-media">
       <img src="/assets/research_photo/dygcl.jpg" alt="dygcl" loading="lazy">
       <div class="img-caption">An overview of Dynamic Graph Contrastive Learning, (DyGCL) architecture. We feed input graphs into the Local View Encoder and Global View Encoder. Local View encoder learns the dynamic graph representation through the dynamic node representation. Global-View Encoder learns dynamic graph representation through graph pooling and the LSTM model. After optimizing representations by contrastive learning, they are combined by an MLP layer and fed to the predictor for event prediction.</div>
+
     </div>
     <div class="alt-text">
       <h3>Effects of COVID-19 in Opioid
 Addiction Recovery</h3>
       <div class="venue">📘 BigData'24 &nbsp;·&nbsp;<span class="badge">DyGNN</span> <span class="badge">Event Understanding</span></div>
       <p><strong>Overview. </strong> DyGCL is a Dynamic Graph Contrastive Learning framework designed for event prediction. It integrates both local and global view encoders to capture fine-grained node dynamics and the overall structural evolution of graphs. By optimizing these representations through contrastive learning and combining them via an attention mechanism, DyGCL effectively models temporal patterns and achieves superior performance on multiple real-world datasets.</p>
-          </div>
-  </section>
 
+    </div>
+  </section>
 </div>
 
-
-
-<div class="topic-band"><strong>Topic:</strong> Biomedical Knowledge Mining from Social Networks</div>
-
+<!-- TOPIC 6 -->
+<div id="social" class="topic-band"><strong>Topic:</strong> Biomedical Knowledge Mining from Social Networks</div>
 <div class="alt-wrap">
-
   <section class="alt-section">
     <div class="alt-media">
       <img src="/assets/research_photo/covid.jpg" alt="COVID network analysis" loading="lazy">
       <div class="img-caption">Overview of the five-step framework for analyzing COVID-19’s impact on Active MAT Medicine Users (AMMUs) using Twitter data.</div>
+
     </div>
     <div class="alt-text">
       <h3>Effects of COVID-19 in Opioid
 Addiction Recovery</h3>
       <div class="venue">📘 ICMLA'21 &nbsp;·&nbsp;<span class="badge">Social Network</span> <span class="badge">Text Mining</span></div>
       <p><strong>Overview. </strong> This study analyzes Twitter data to assess COVID-19’s impact on opioid treatment, revealing a 30% drop in MAT use and increased illicit opioid mentions, highlighting relapse risks and the need for continued care.</p>
-          </div>
-  </section>
 
+    </div>
+  </section>
 </div>
+
+<script>
+/* Smooth-scroll via pills + active state on scroll */
+const pills = document.querySelectorAll('.pill');
+const topics = [...document.querySelectorAll('.topic-band')];
+
+function activate(targetId){
+  pills.forEach(b=>b.classList.toggle('active', b.dataset.target===targetId));
+}
+
+pills.forEach(b=>{
+  b.addEventListener('click', ()=>{
+    const id = b.dataset.target;
+    const el = document.getElementById(id);
+    if(el){
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      activate(id);
+      history.replaceState(null,'',`#${id}`);
+    }
+  });
+});
+
+/* Highlight pill based on current scroll position */
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      activate(e.target.id);
+    }
+  });
+},{rootMargin:'-50% 0px -45% 0px', threshold:0.01});
+topics.forEach(t=>io.observe(t));
+
+/* If URL has a hash, jump there and set active on load */
+window.addEventListener('DOMContentLoaded', ()=>{
+  const hash = location.hash.replace('#','');
+  if(hash && document.getElementById(hash)){
+    activate(hash);
+  } else {
+    activate('hypergnn');
+  }
+});
+</script>
 
 </body>
 </html>
