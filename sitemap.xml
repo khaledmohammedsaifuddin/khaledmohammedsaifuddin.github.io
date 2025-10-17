@@ -9,10 +9,6 @@
          <lastmod>2025-10-17</lastmod>
     </url>
     <url>
-         <loc>https://khaledlab.com/people/</loc>
-         <lastmod>2025-10-17</lastmod>
-    </url>
-    <url>
          <loc>https://khaledlab.com/publications/</loc>
          <lastmod>2025-10-17</lastmod>
     </url>
@@ -22,6 +18,10 @@
     </url>
     <url>
          <loc>https://khaledlab.com/teaching/</loc>
+         <lastmod>2025-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://khaledlab.com/team/</loc>
          <lastmod>2025-10-17</lastmod>
     </url>
 </urlset>
