@@ -828,7 +828,25 @@ label.md-header__button[for="__search"] {
 
 
 }
-
+/* =====================================================
+   FOOTER: nav bar-er moto blue
+   ===================================================== */
+.md-footer,
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color) !important;
+}
+.md-footer-meta {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.md-footer-meta,
+.md-footer-meta a,
+.md-copyright,
+.md-copyright__highlight {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.md-footer-meta a:hover {
+  color: #fff !important;
+}
 
 
 
