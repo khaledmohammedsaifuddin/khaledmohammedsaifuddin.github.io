@@ -579,7 +579,7 @@
   </div>
 </div>
 
-<div class="rp-grid">
+<div class="rp-grid rp-grid-3">
   <div class="rp-card">
     <img class="rp-photo" src="../assets/resource_photo/max_tower_t2.jpeg" alt="Dell Pro Max Tower T2 workstation">
     <div class="rp-card-top">
@@ -601,10 +601,30 @@
     </div>
     <p>For annotating papers, presentations, and demos of research prototypes.</p>
   </div>
+  <div class="rp-card">
+    <img class="rp-photo" src="../assets/resource_photo/dell.jpg" alt="Dell OptiPlex 5090 desktop">
+    <div class="rp-card-top">
+      <div><h3>Office workstation</h3><p class="rp-spec">Dell OptiPlex 5090</p></div>
+    </div>
+    <p>Intel Core i7-10700 (8 cores, up to 4.8 GHz), 32 GB RAM, 512 GB storage. For coding, writing, and lightweight experiments.</p>
+  </div>
+  <div class="rp-card">
+    <img class="rp-photo" src="../assets/resource_photo/dell_curved_monitor.png" alt="Dell 34-inch curved WQHD monitor">
+    <div class="rp-card-top">
+      <div><h3>Ultrawide monitors</h3><p class="rp-spec">2× Dell 34″ Curved WQHD</p></div>
+    </div>
+    <p>3440 × 1440 resolution, 165 Hz, 1500R curve. Extra screen space for coding, reading papers, and visualizing results.</p>
+  </div>
+  <div class="rp-card">
+    <img class="rp-photo" src="../assets/resource_photo/projector.png" alt="Epson Home Cinema 980 projector">
+    <div class="rp-card-top">
+      <div><h3>Projector</h3><p class="rp-spec">Epson Home Cinema 980</p></div>
+    </div>
+    <p>4,000-lumen Full HD 1080p 3LCD projector for lab meetings, reading groups, and presentations.</p>
+  </div>
 </div>
 
 </div>
-
 <!-- ===== School of Computing ===== -->
 <div class="rp-head">
   <h2>School of Computing</h2>
@@ -738,6 +758,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 16px;
+}
+.kl-resp .rp-grid.rp-grid-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) {
+  .kl-resp .rp-grid.rp-grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .kl-resp .rp-grid.rp-grid-3 { grid-template-columns: 1fr; }
 }
 .kl-resp .rp-card, .kl-resp .rp-hpc {
   background: #fff;
