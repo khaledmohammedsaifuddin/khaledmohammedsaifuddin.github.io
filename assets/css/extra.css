@@ -300,11 +300,11 @@ border: 2px solid white;
   --lab-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 .inline-logo {
-  height: 90px;        /* adjust size */
-  width: 120px;
+  height: 75px;        /* adjust size */
+  width: 80px;
   vertical-align: middle; /* aligns with text baseline */
   margin-bottom: 0 !important; 
-}
+}s
 /* Intro section */
 .lab-intro {
   max-width: 1200px;
@@ -341,7 +341,7 @@ border: 2px solid white;
 }
 
 .lab-intro h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin: 0 !important;              /* Force no margin */
   margin-top: 0 !important;          /* Glued to intro-box */
