@@ -564,18 +564,18 @@
 <div class="rp-lab">
 
 <div class="rp-feature">
-  <div class="rp-feature-text">
-    <img class="rp-feature-img" src="../assets/resource_photo/p8_thinkstation.jpeg" alt="Lenovo ThinkStation P8 workstation">
+  <img class="rp-feature-img" src="../assets/resource_photo/p8_thinkstation.jpeg" alt="Lenovo ThinkStation P8 workstation">
+  <div class="rp-feature-body">
     <span class="rp-tag">Flagship GPU workstation</span>
     <h3>Lenovo ThinkStation P8</h3>
     <p>Large-scale capability for training and evaluating graph and hypergraph neural networks, foundation models, LLMs, and multimodal AI systems.</p>
-  </div>
-  <div class="rp-stats">
-    <div class="rp-stat rp-stat-main"><span class="rp-num">288 GB</span><span class="rp-lbl">Total GPU memory</span></div>
-    <div class="rp-stat"><span class="rp-num">3×</span><span class="rp-lbl">NVIDIA RTX PRO 6000 Blackwell Max-Q, 96 GB GDDR7 each</span></div>
-    <div class="rp-stat"><span class="rp-num">512 GB</span><span class="rp-lbl">DDR5 ECC memory</span></div>
-    <div class="rp-stat"><span class="rp-num">24 cores</span><span class="rp-lbl">AMD Threadripper PRO 7965WX, up to 5.3 GHz</span></div>
-    <div class="rp-stat"><span class="rp-num">8 TB</span><span class="rp-lbl">PCIe Gen4 NVMe SSD</span></div>
+    <div class="rp-stats">
+      <div class="rp-stat rp-stat-main"><span class="rp-num">288 GB</span><span class="rp-lbl">Total GPU memory</span></div>
+      <div class="rp-stat"><span class="rp-num">3×</span><span class="rp-lbl">NVIDIA RTX PRO 6000 Blackwell Max-Q, 96 GB GDDR7 each</span></div>
+      <div class="rp-stat"><span class="rp-num">512 GB</span><span class="rp-lbl">DDR5 ECC memory</span></div>
+      <div class="rp-stat"><span class="rp-num">24 cores</span><span class="rp-lbl">AMD Threadripper PRO 7965WX, up to 5.3 GHz</span></div>
+      <div class="rp-stat"><span class="rp-num">8 TB</span><span class="rp-lbl">PCIe Gen4 NVMe SSD</span></div>
+    </div>
   </div>
 </div>
 
@@ -696,13 +696,14 @@
   border-radius: 10px;
   padding: 8px;
 }
-.kl-resp .rp-feature-img { aspect-ratio: 4 / 3; margin-bottom: 14px; }
+.kl-resp .rp-feature-img { aspect-ratio: 1 / 1; margin-bottom: 0; }
+.kl-resp .rp-feature-body .rp-stats { margin-top: 16px; }
 .kl-resp .rp-photo { aspect-ratio: 16 / 10; margin-bottom: 12px; }
 
 /* Featured workstation */
 .kl-resp .rp-feature {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: 0.75fr 1.6fr;
   gap: 24px;
   align-items: center;
   background: #fff;
@@ -771,6 +772,7 @@
   .kl-resp .rp-feature, .kl-resp .rp-hpc { grid-template-columns: 1fr; padding: 18px; }
   .kl-resp .rp-hpc-stats { grid-template-columns: repeat(2, 1fr); }
   .kl-resp .rp-lab { padding-left: 12px; }
+  .kl-resp .rp-feature-img { aspect-ratio: 4 / 3; }
 }
 </style>
 
