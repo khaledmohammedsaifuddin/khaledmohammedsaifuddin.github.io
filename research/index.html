@@ -586,6 +586,8 @@ html,body{scroll-behavior:smooth}
   border-top:1px dashed #ddd;
 }
 .alt-text h3{ margin:.2rem 0 .4rem; font-size:1.05rem }
+.alt-text h3 a{ color:inherit; text-decoration:none; }
+.alt-text h3 a:hover{ color:var(--brand); text-decoration:underline; }
 .alt-text .venue{ font-size:.88rem; opacity:.8 }
 .alt-text p{ margin:.45rem 0; line-height:1.55 }
 .alt-links a{ margin-right:.6rem; font-size:.92rem }
@@ -718,7 +720,7 @@ learn each view and finally, a network-aware contrastive loss is used with a sup
 nodes and hyperedges into regular attribute-based semantic attention.</div>
     </div>
     <div class="alt-text">
-      <h3>THTN: Topology-Guided Hypergraph Transformer Network</h3>
+      <h3><a href="https://link.springer.com/chapter/10.1007/978-981-95-7075-1_23" target="_blank" rel="noopener">THTN: Topology-Guided Hypergraph Transformer Network</a></h3>
       <div class="venue">📘 Stanford Graph Learning Workshop'24 · PRICAI'25 &nbsp;·&nbsp; <span class="badge">Graph Transformer</span> <span class="badge">Structure-Aware Attention</span></div>
       <p><strong>Overview. </strong> THTN, a topology-guided hypergraph transformer that captures higher-order relations between nodes in a network by representing subgraphs as hyperedges. Then, it introduces a structure-aware attention mechanism that jointly considers semantic and topological cues to identify critical nodes and hyperedges. In addition, a structural–spatial encoding module integrates graph topology and spatial context into node embeddings, enhancing the model’s ability to capture both local and global dependencies. </p>
     </div>
@@ -735,7 +737,7 @@ nodes and hyperedges into regular attribute-based semantic attention.</div>
       <div class="img-caption">Truss decomposition-based edge pruning framework for graph sparsification to tackle oversmoothing problem</div>
     </div>
     <div class="alt-text">
-      <h3>TGS: Tackling Oversmoothing in GNN via Graph Sparsification</h3>
+      <h3><a href="https://doi.org/10.1007/978-3-031-70371-3_10" target="_blank" rel="noopener">TGS: Tackling Oversmoothing in GNN via Graph Sparsification</a></h3>
       <div class="venue">📘 ECML PKDD'24 &nbsp;·&nbsp; <span class="badge">Truss-based Pruning</span> <span class="badge">Expressivity</span></div>
       <p><strong>Overview. </strong> Truss-based graph sparsification (TGS) model to mitigate the oversmoothing problem in deep GNNs. By pruning redundant edges from dense graph regions, TGS preserves essential topological structures while preventing excessive feature mixing.</p>
     </div>
@@ -755,7 +757,7 @@ encoder for hyperedge (drug) representation learning and decoder for DDI learnin
 
     </div>
     <div class="alt-text">
-      <h3>HyGNN: Hypergraph Neural Network for Drug Representation for DDI Prediction</h3>
+      <h3><a href="https://doi.org/10.1109/ICDE55515.2023.00119" target="_blank" rel="noopener">HyGNN: Hypergraph Neural Network for Drug Representation for DDI Prediction</a></h3>
       <div class="venue">📘 ICDE'23 &nbsp;·&nbsp; <span class="badge">Drug Discovery</span> <span class="badge">HyperGNN</span></div>
       <p><strong>Overview. </strong> HyGNN- a novel hypergraph neural network designed for accurate drug–drug interaction (DDI) prediction using only SMILES representations. It constructs a hypergraph from molecular substructures extracted from SMILES strings, allowing the model to capture complex chemical relationships beyond pairwise similarities. HyGNN introduces an attention-based hypergraph edge encoder to generate expressive hyperedge representations and a decoder to predict interactions between drug pairs. Extensive experiments demonstrate that HyGNN achieves superior performance across multiple evaluation metrics, including F1 score, ROC-AUC, and PR-AUC, and generalizes effectively to new and unseen drugs, highlighting its robustness and practical applicability in drug discovery.</p>
 
@@ -773,7 +775,7 @@ Perceptron (MLP) predicts drug-target-disease interactions.</div>
 
     </div>
     <div class="alt-text">
-      <h3>HeTriNet: Heterogeneous Graph Triplet Attention Network</h3>
+      <h3><a href="https://doi.org/10.1109/DSAA61799.2024.10722832" target="_blank" rel="noopener">HeTriNet: Heterogeneous Graph Triplet Attention Network</a></h3>
       <div class="venue">📘 DSAA'24 &nbsp;·&nbsp; <span class="badge">Triplet Attention</span> <span class="badge">HGNN</span></div>
      <p><strong>Overview. </strong> HeTAN- a heterogeneous graph triplet attention network that models complex interactions among drugs, targets, and diseases. By introducing triplet message passing and triplet-wise attention, it captures higher-order relationships beyond pairwise interactions. This design enables HeTAN to uncover meaningful drug–target–disease associations and achieve superior performance on real-world biomedical datasets.
 </p>
@@ -797,7 +799,7 @@ important subsequences and learning the label of the sequences.</div>
 
     </div>
     <div class="alt-text">
-      <h3>Seq-HyGAN: Sequence understanding using Hypergraph Attention Network</h3>
+      <h3><a href="https://doi.org/10.1145/3583780.3615057" target="_blank" rel="noopener">Seq-HyGAN: Sequence understanding using Hypergraph Attention Network</a></h3>
       <div class="venue">📘 CIKM'23 &nbsp;·&nbsp; <span class="badge">Sequence Analysis</span> <span class="badge">HyperGNN</span></div>
       <p><strong>Overview. </strong>Seq-HyGAN- sequence hypergraph attention network that models higher-order relationships among subsequences for sequence classification. By capturing both local and global dependencies through attention-based learning, it produces richer representations and achieves superior accuracy over existing approaches.
 </p>
@@ -812,7 +814,7 @@ important subsequences and learning the label of the sequences.</div>
 
     </div>
     <div class="alt-text">
-      <h3>Drug Abuse Detection from Social Network via Graph Learning</h3>
+      <h3><a href="https://ieeexplore.ieee.org/document/9671532" target="_blank" rel="noopener">Drug Abuse Detection from Social Network via Graph Learning</a></h3>
       <div class="venue">📘 BigData'21 &nbsp;·&nbsp;<span class="badge">GNN</span> <span class="badge">Text Understanding</span></div>
       <p><strong>Overview. </strong>This work detects drug abuse (DA) events from social media using graph neural networks (GNNs). By constructing text graphs from Twitter data at corpus and document levels, it captures word- and document-level relationships for effective classification. Experimental results show that GNN-based models outperform traditional machine learning and deep learning approaches in identifying DA-related content.</p>
 
@@ -831,7 +833,7 @@ important subsequences and learning the label of the sequences.</div>
 
     </div>
     <div class="alt-text">
-      <h3> Dynamic graph contrastive learning for event prediction</h3>
+      <h3><a href="https://ieeexplore.ieee.org/document/10825046" target="_blank" rel="noopener">Dynamic graph contrastive learning for event prediction</a></h3>
       <div class="venue">📘 BigData'24 &nbsp;·&nbsp;<span class="badge">DyGNN</span> <span class="badge">Event Understanding</span></div>
       <p><strong>Overview. </strong> DyGCL- Dynamic Graph Contrastive Learning framework designed for event prediction. It integrates both local and global view encoders to capture fine-grained node dynamics and the overall structural evolution of graphs. By optimizing these representations through contrastive learning and combining them via an attention mechanism, DyGCL effectively models temporal patterns and achieves superior performance on multiple real-world datasets.</p>
 
@@ -849,8 +851,7 @@ important subsequences and learning the label of the sequences.</div>
 
     </div>
     <div class="alt-text">
-      <h3>Effects of COVID-19 in Opioid
-Addiction Recovery</h3>
+      <h3><a href="https://doi.org/10.1109/ICMLA52953.2021.00216" target="_blank" rel="noopener">Effects of COVID-19 in Opioid Addiction Recovery</a></h3>
       <div class="venue">📘 ICMLA'21 &nbsp;·&nbsp;<span class="badge">Social Network</span> <span class="badge">Text Mining</span></div>
       <p><strong>Overview. </strong> This study analyzes Twitter data to assess COVID-19’s impact on opioid treatment, revealing a 30% drop in MAT use and increased illicit opioid mentions, highlighting relapse risks and the need for continued care.</p>
 
