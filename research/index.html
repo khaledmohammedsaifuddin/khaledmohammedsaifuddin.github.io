@@ -925,6 +925,7 @@
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .kl-rs .rs-paper:hover { border-color: #a5c8ff; box-shadow: 0 6px 18px rgba(63,81,181,0.08); }
+.kl-rs .rs-paper.rs-flip { grid-template-columns: 1fr 1.25fr; }
 .kl-rs .rs-paper.rs-flip .rs-media { order: 2; }
 .kl-rs .rs-paper.rs-noimg { grid-template-columns: 1fr; padding: 16px 20px; }
 
@@ -971,6 +972,7 @@
 
 /* ---------- Mobile ---------- */
 @media (max-width: 860px) {
+  .kl-rs .rs-paper.rs-flip { grid-template-columns: 1fr; }
   .kl-rs .rs-paper { grid-template-columns: 1fr; }
   .kl-rs .rs-paper.rs-flip .rs-media { order: 0; }
   .kl-rs .rs-proj-grid { grid-template-columns: 1fr; }
