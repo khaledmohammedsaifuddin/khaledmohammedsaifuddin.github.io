@@ -767,7 +767,7 @@
       </div>
     </article>
 
-    <article class="rs-paper">
+        <article class="rs-paper rs-narrow">
       <figure class="rs-media">
         <img src="/assets/research_photo/seqhygan.png" alt="Seq-HyGAN architecture" loading="lazy">
       </figure>
@@ -958,9 +958,12 @@
 .kl-rs .rs-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
 .kl-rs .rs-text p { font-size: 14.5px; line-height: 1.6; color: #333a4d; margin: 0; }
 .kl-rs .rs-text p.rs-authors { font-size: 14px; color: var(--kl-muted); }
-
+.kl-rs .rs-paper.rs-narrow { grid-template-columns: 0.75fr 1.25fr; }
+.kl-rs .rs-paper.rs-narrow.rs-flip { grid-template-columns: 1.25fr 0.75fr; }
 /* ---------- Mobile ---------- */
 @media (max-width: 860px) {
+  .kl-rs .rs-paper.rs-narrow,
+  .kl-rs .rs-paper.rs-narrow.rs-flip { grid-template-columns: 1fr; }
   .kl-rs .rs-paper.rs-flip { grid-template-columns: 1fr; }
   .kl-rs .rs-paper { grid-template-columns: 1fr; }
   .kl-rs .rs-paper.rs-flip .rs-media { order: 0; }
