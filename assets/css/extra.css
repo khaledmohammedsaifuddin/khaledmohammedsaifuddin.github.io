@@ -849,7 +849,7 @@ label.md-header__button[for="__search"] {
 }
 .member-link {
   display: inline-block;
-  margin: 6px 7px 0 !important;
+  margin: 7px 8px 0 !important;
   transition: opacity 0.2s ease;
 }
 .member-link:hover { color: #3f51b5 !important; }
