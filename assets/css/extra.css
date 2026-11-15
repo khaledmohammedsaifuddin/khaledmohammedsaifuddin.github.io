@@ -847,15 +847,4 @@ label.md-header__button[for="__search"] {
 .md-footer-meta a:hover {
   color: #fff !important;
 }
-.member-link {
-  display: inline-block;
-  margin: 7px 8px 0 !important;
-  transition: opacity 0.2s ease;
-}
-.member-link:hover { color: #3f51b5 !important; }
-.member-link .twemoji svg { width: 18px; height: 18px; }
-.member-link[title="Website"] { color: #3f51b5 !important; }
-.member-link[title="Google Scholar"] { color: #4285F4 !important; }
-.member-link[title="GitHub"] { color: #181717 !important; }
-.member-link[title="LinkedIn"] { color: #0A66C2 !important; }
-.member-link:hover { opacity: 0.7; }
+
