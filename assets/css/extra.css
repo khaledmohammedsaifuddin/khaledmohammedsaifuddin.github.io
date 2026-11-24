@@ -1085,7 +1085,12 @@ label.md-header__button[for="__search"] {
 }
 .md-content__inner {
   margin: 0 !important;
-  padding: 1.2rem 0 1.5rem !important;
+  padding: 0.4rem 0 1.5rem !important;
+}
+/* Page er prothom jinish er upore extra faka na */
+.md-content__inner > :first-child,
+.md-content__inner > :first-child > :first-child {
+  margin-top: 0 !important;
 }
 /* Page er nijer max-width tule deya, jate puro jayga nay */
 .md-content__inner > div,
