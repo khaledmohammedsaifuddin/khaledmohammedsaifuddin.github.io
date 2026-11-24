@@ -1092,6 +1092,10 @@ label.md-header__button[for="__search"] {
 .md-content__inner > :first-child > :first-child {
   margin-top: 0 !important;
 }
+/* Lukano "# Title" er porer jinish er upore extra faka na */
+.md-content__inner > h1:first-child + * {
+  margin-top: 0 !important;
+}
 /* Page er nijer max-width tule deya, jate puro jayga nay */
 .md-content__inner > div,
 .md-content__inner > section {
