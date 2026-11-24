@@ -848,3 +848,180 @@ label.md-header__button[for="__search"] {
   color: #fff !important;
 }
 
+
+/* =====================================================
+   WHITE HEADER: logo + KhaledLab (left), menu (right)
+   (eta file er ekdom sheshe thakbe)
+   ===================================================== */
+
+/* Purono khali blue header bar lukano */
+.md-header {
+  display: none !important;
+}
+
+/* Menu bar ke sada header banano, scroll korleo upore thakbe */
+.md-tabs {
+  position: sticky !important;
+  top: 0;
+  z-index: 10;
+  background: #ffffff !important;
+  border-bottom: 1px solid #e6e8f0;
+  box-shadow: none !important;
+}
+.md-tabs > .md-grid {
+  flex: 1 1 auto;
+  max-width: 61rem;
+  margin: 0 auto;
+}
+.md-tabs[hidden] {
+  pointer-events: auto !important;
+}
+.md-tabs[hidden] .md-tabs__link {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.md-tabs__list {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.25rem;
+  width: 100%;
+  padding: 0.45rem 0.8rem !important;
+  margin: 0 !important;
+  height: auto !important;
+  white-space: nowrap;
+}
+
+/* Logo + KhaledLab lekha (bam dike) */
+.md-tabs__list::before {
+  content: "Khaled" !important;
+  display: inline-flex !important;
+  align-items: center;
+  width: auto !important;
+  height: 3rem !important;
+  padding-left: 3.85rem;
+  margin-right: 0 !important;
+  order: -2;
+  background-image: url('../logo_3_trim.png') !important;
+  background-size: contain !important;
+  background-position: left center !important;
+  background-repeat: no-repeat !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #312246;
+}
+.md-tabs__list::after {
+  content: "Lab";
+  order: -1;
+  margin-left: -0.25rem;
+  margin-right: auto;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #8a0a42;
+}
+
+/* Menu items */
+.md-tabs__item {
+  height: auto !important;
+  padding: 0 !important;
+}
+.md-tabs__link {
+  margin: 0 !important;
+  padding: 0.25rem 0.55rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  color: #2b2f3a !important;
+  opacity: 1 !important;
+  border-bottom: 2px solid transparent;
+}
+.md-tabs__link:hover {
+  color: #3f51b5 !important;
+}
+
+/* Je page e achen: neel underline */
+.md-tabs__item--active .md-tabs__link {
+  color: #3f51b5 !important;
+  font-weight: 700 !important;
+  border-bottom-color: #3f51b5;
+}
+
+/* Director: halka neel pill */
+.md-tabs__item:last-child .md-tabs__link {
+  background: #eef0fb;
+  color: #3f51b5 !important;
+  border-radius: 8px;
+  border-bottom: none;
+  margin-left: 0.3rem !important;
+}
+.md-tabs__item:last-child.md-tabs__item--active .md-tabs__link {
+  background: #3f51b5;
+  color: #ffffff !important;
+}
+
+/* Mobile: shudhu logo, menu side e scroll hobe */
+@media screen and (max-width: 768px) {
+  .md-tabs__list::before {
+    content: "" !important;
+    width: 3.4rem !important;
+    padding-left: 0;
+    margin-right: 0.4rem !important;
+  }
+  .md-tabs__list::after {
+    display: none;
+  }
+  .md-tabs__item:first-child {
+    margin-left: auto;
+  }
+  .md-tabs__list {
+    overflow-x: auto;
+  }
+}
+
+/* =====================================================
+   WIDE PAGES: header ar page ekই chouRa (~1120px)
+   (header block er pore, file er ekdom sheshe)
+   ===================================================== */
+.md-tabs > .md-grid,
+.md-main__inner.md-grid {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+}
+.md-tabs__list {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.md-content {
+  margin: 0 !important;
+  max-width: none !important;
+}
+.md-content__inner {
+  margin: 0 !important;
+  padding: 1.2rem 0 1.5rem !important;
+}
+/* Page er nijer max-width tule deya, jate puro jayga nay */
+.md-content__inner > div,
+.md-content__inner > section {
+  max-width: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .md-tabs > .md-grid,
+  .md-main__inner.md-grid {
+    padding: 0 1rem !important;
+  }
+}
+/* KhaledLab nam: shob jaygay header er moto rong */
+.kl-brand {
+  font-weight: 800;
+  color: #312246;
+  white-space: nowrap;
+}
+.kl-brand span {
+  color: #8a0a42;
+}
