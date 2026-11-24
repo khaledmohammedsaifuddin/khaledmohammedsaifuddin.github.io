@@ -950,13 +950,17 @@ label.md-header__button[for="__search"] {
   border-bottom-color: #3f51b5;
 }
 
-/* Director: halka neel pill */
+/* Director: shudhu border wala gol button */
 .md-tabs__item:last-child .md-tabs__link {
-  background: #eef0fb;
+  background: transparent;
   color: #3f51b5 !important;
-  border-radius: 8px;
-  border-bottom: none;
-  margin-left: 0.3rem !important;
+  border: 1.5px solid #3f51b5;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem !important;
+  margin-left: 0.4rem !important;
+}
+.md-tabs__item:last-child .md-tabs__link:hover {
+  background: #eef0fb;
 }
 .md-tabs__item:last-child.md-tabs__item--active .md-tabs__link {
   background: #3f51b5;
