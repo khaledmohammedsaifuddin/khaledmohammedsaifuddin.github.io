@@ -1,9 +1,17 @@
-/* Mobile menu: dan e "Menu" button, chaple niche dropdown khule */
+/* Header: logo e click korle Home, ar mobile e dan e "Menu" dropdown */
 (function () {
   function init() {
     var tabs = document.querySelector('.md-tabs');
     var grid = tabs && tabs.querySelector('.md-grid');
     if (!grid || grid.querySelector('.kl-menu-btn')) return;
+
+    /* Logo + KhaledLab e click korle Home page */
+    var homeLink = tabs.querySelector('.md-tabs__item a');
+    var brand = document.createElement('a');
+    brand.className = 'kl-brand-link';
+    brand.href = homeLink ? homeLink.href : '/';
+    brand.setAttribute('aria-label', 'KhaledLab home');
+    grid.appendChild(brand);
 
     var btn = document.createElement('button');
     btn.type = 'button';

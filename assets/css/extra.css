@@ -967,6 +967,30 @@ label.md-header__button[for="__search"] {
   color: #ffffff !important;
 }
 
+/* Logo + KhaledLab: click korle Home page */
+.md-tabs > .md-grid {
+  position: relative;
+}
+.kl-brand-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  width: 11rem;
+  z-index: 2;
+}
+.kl-brand-link:focus-visible {
+  outline: 3px solid #a5c8ff;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+  .kl-brand-link {
+    left: 1rem;
+    width: 10rem;
+  }
+}
+
 /* Mobile menu: computer e lukano */
 .kl-menu-btn,
 .kl-menu-panel {
@@ -1116,4 +1140,4 @@ label.md-header__button[for="__search"] {
 }
 .kl-brand span {
   color: #8a0a42;
-}
+}s
