@@ -594,16 +594,18 @@
   <div class="hero-grid">
 
     <div class="hero-left">
-      <p class="hero-lead"><strong class="kl-brand">Khaled<span>Lab</span></strong> is a research group in the School of Computing at Southern Illinois University Carbondale (SIUC), led by Dr. Khaled Mohammed Saifuddin.</p>
-      <p class="hero-sub">We develop AI methods that are robust, efficient, and interpretable, spanning graph learning, network science, and large language and vision–language models, and apply them to problems in biomedicine, health, and beyond.</p>
+      <div class="hero-name"><span class="kl-brand">Khaled<span>Lab</span></span></div>
+      <div class="hero-affil">Computer Science, School of Computing<br>Southern Illinois University Carbondale</div>
+      <p class="hero-sub">Led by Dr. Khaled Mohammed Saifuddin, we develop AI methods that are robust, efficient, and interpretable, spanning graph learning, network science, and large language and vision–language models, and apply them to problems in biomedicine, health, and beyond.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="publications/">Explore our research</a>
+        <a class="btn btn-primary" href="research/">Explore our research</a>
         <a class="btn btn-ghost" href="opportunities/">Work with us</a>
       </div>
     </div>
 
     <div class="hero-areas">
-            <div class="area-grid">
+      <div class="areas-title">Research areas</div>
+      <div class="area-grid">
 
       <a class="area" href="research/">
         <div class="viz">
@@ -746,7 +748,7 @@
 <section class="join">
   <div>
     <h2>Interested in working with us?</h2>
-    <p>We welcome collaborators, visiting researchers, and students interested in our reserch.</p>
+    <p>We welcome collaborators, visiting researchers, and SIUC students interested in graph learning and AI for science.</p>
   </div>
   <a class="btn btn-primary" href="opportunities/">See opportunities</a>
 </section>
@@ -794,6 +796,20 @@
   gap: 32px;
   align-items: center;
 }
+.kl-home .hero-name {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+.kl-home .hero-affil {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #4a5064;
+  padding-left: 12px;
+  border-left: 3px solid #b0285a;
+  margin: 0 0 18px;
+}
 .kl-home .hero-lead {
   font-size: 21px;
   line-height: 1.5;
@@ -809,18 +825,25 @@
 }
 
 /* ---------- Research areas (hero er dan e, 2x2 tile) ---------- */
-.kl-home .hero-areas { display: flex; flex-direction: column; gap: 10px; }
+.kl-home .hero-areas {
+  display: flex; flex-direction: column; gap: 10px;
+  background: #fafbff;
+  border-radius: 18px;
+  padding: 12px;
+  margin: -12px;
+}
 .kl-home .areas-title {
   font-size: 14px;
   font-weight: 700;
   color: #312246;
-  margin: 0 0 0 2px;
+  margin: 0 0 0 4px;
+  color: #312246;
 }
 .kl-home .area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .kl-home .area {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.95);
+  background: #fff;
   border: 1px solid var(--kl-line);
   border-radius: 14px;
   padding: 10px 10px 12px;
@@ -1052,7 +1075,7 @@
 .kl-home .mini-news a:hover { text-decoration: underline; }
 .kl-home .mn-date { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; color: #8a0a42; padding-top: 3px; }
 .kl-home .proj {
-  display: block; background: #fff; border: 1px solid var(--kl-line);   border-left: 3px solid #b0285a;
+  display: block; background: #fff; border: 1px solid var(--kl-line); border-left: 3px solid #b0285a;
   border-radius: 10px; padding: 12px 16px; margin-bottom: 12px; color: inherit; text-decoration: none;
   transition: box-shadow 0.2s ease;
 }
@@ -1083,7 +1106,21 @@
 }
 @media (max-width: 600px) {
   .kl-home .hero { padding: 22px 16px; }
-  .kl-home .hero-lead { font-size: 18px; }
+  .kl-home .hero-name {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+.kl-home .hero-affil {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #4a5064;
+  padding-left: 12px;
+  border-left: 3px solid #b0285a;
+  margin: 0 0 18px;
+}
+.kl-home .hero-lead { font-size: 18px; }
   .kl-home .hero-sub { font-size: 15px; }
   .kl-home .area .viz { height: 60px; }
   .kl-home .kl-h2 { font-size: 21px; }
